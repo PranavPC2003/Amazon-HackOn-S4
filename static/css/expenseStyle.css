@@ -1,0 +1,368 @@
+/* @import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amazon Ember', sans-serif;
+}
+
+.side_bar {
+    width: 30vw;
+    height: 92vh;
+    background-color: #F6D265;
+    color: #232C37;
+    display: flex;
+    flex-direction: column;
+}
+
+.side_bar p img {
+    height: auto;
+    width: 135px;
+    position: absolute;
+    top: 170px;
+    left: 220px;
+}
+
+.content {
+    width: 70vw;
+    height: 92vh;
+    background-color: #232C37;
+    color: white;
+}
+
+.inner_conent {
+    display: flex;
+    flex-direction: row;
+}
+
+.display {
+    width: 50pc;
+    height: 60vh;
+}
+
+.settings {
+    width: 50pc;
+    height: 60vh;
+    padding-left: 10px;
+}
+
+.main-heading {
+    font-size: 65px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.main-heading2 {
+    font-size: 35px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 7px;
+    line-height: 40px;
+}
+
+.display-heading{
+    font-size: 35px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 45px;
+    line-height: 40px;
+}
+
+.time_period-form {
+    margin-top: 50px;
+    align-self: center;
+}
+.time_period-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+.month-select{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.stats{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 190px;
+    margin-top: 20px;
+}
+.set-budget{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.Savings {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+}
+
+.Budget {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+   
+}
+
+.Expense {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: black;
+    width: 8vw;
+    align-self: center;
+}
+#piechart{
+    margin-left: 30px;
+}
+#half-donutchart{
+    align-self: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.set{
+    margin-left: 30px;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+input[type='number']{
+    padding: 5px;
+    border-radius: 10px;
+    border: transparent;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#textInput1,#textInput2,#textInput3{
+    position: relative;
+    bottom: 5px;
+    left: 20px;
+}
+#textInputOvr{
+    width: 100px;
+} */
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+:root {
+    --base-font-size: 14px;
+    font-size: var(--base-font-size); /* Set the base font size */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amazon Ember', sans-serif;
+}
+
+.side_bar {
+    width: 30vw;
+    height: 92vh;
+    background-color: #F6D265;
+    color: #232C37;
+    display: flex;
+    flex-direction: column;
+}
+
+.side_bar p img {
+    height: auto;
+    width: 9.64rem; /* 135px / 14 = 9.64rem */
+    position: absolute;
+    top: 12.14rem; /* 170px / 14 = 12.14rem */
+    left: 15.71rem; /* 220px / 14 = 15.71rem */
+}
+
+.content {
+    width: 70vw;
+    height: 92vh;
+    background-color: #232C37;
+    color: white;
+}
+
+.inner_conent {
+    display: flex;
+    flex-direction: row;
+}
+
+.display {
+    width: 50%;
+    height: 60vh;
+}
+
+.settings {
+    width: 50%;
+    height: 60vh;
+    padding-left: 0.71rem; /* 10px / 14 = 0.71rem */
+}
+
+.main-heading {
+    font-size: 5rem; /* 70px / 14 = 5rem */
+    font-weight: bolder;
+    margin-left: 2.14rem; /* 30px / 14 = 2.14rem */
+    margin-top: 1.07rem; /* 15px / 14 = 1.07rem */
+}
+
+.main-heading2 {
+    font-size: 2.5rem; /* 35px / 14 = 2.5rem */
+    font-weight: bolder;
+    margin-left: 2.14rem; /* 30px / 14 = 2.14rem */
+    margin-top: 0.5rem; /* 7px / 14 = 0.5rem */
+    line-height: 2.86rem; /* 40px / 14 = 2.86rem */
+}
+
+.display-heading {
+    font-size: 2.5rem; /* 35px / 14 = 2.5rem */
+    font-weight: bolder;
+    margin-left: 2.14rem; /* 30px / 14 = 2.14rem */
+    margin-top: 3.21rem; /* 45px / 14 = 3.21rem */
+    line-height: 2.86rem; /* 40px / 14 = 2.86rem */
+}
+
+.time_period-form {
+    margin-top: 3.57rem; /* 50px / 14 = 3.57rem */
+    align-self: center;
+}
+
+.time_period-select {
+    padding: 0.71rem; /* 10px / 14 = 0.71rem */
+    border: 1px solid #ccc;
+    border-radius: 0.36rem; /* 5px / 14 = 0.36rem */
+    font-size: 1rem; /* 14px / 14 = 1rem */
+    color: #333;
+}
+
+.month-select {
+    padding: 0.36rem; /* 5px / 14 = 0.36rem */
+    border: 1px solid #ccc;
+    border-radius: 0.36rem; /* 5px / 14 = 0.36rem */
+    font-size: 1.07rem; /* 15px / 14 = 1.07rem */
+    color: #333;
+    margin-left: 2.14rem; /* 30px / 14 = 2.14rem */
+    margin-top: 0.57rem; /* 8px / 14 = 0.57rem */
+}
+
+.stats {
+    padding: 0.36rem; /* 5px / 14 = 0.36rem */
+    border: 1px solid #ccc;
+    border-radius: 0.36rem; /* 5px / 14 = 0.36rem */
+    font-size: 1.07rem; /* 15px / 14 = 1.07rem */
+    color: #333;
+    margin-left: 13.57rem; /* 190px / 14 = 13.57rem */
+    margin-top: 1.43rem; /* 20px / 14 = 1.43rem */
+}
+
+.set-budget {
+    padding: 0.36rem; /* 5px / 14 = 0.36rem */
+    border: 1px solid #ccc;
+    border-radius: 0.36rem; /* 5px / 14 = 0.36rem */
+    font-size: 1.07rem; /* 15px / 14 = 1.07rem */
+    color: #333;
+    margin-left: 10.71rem; /* 150px / 14 = 10.71rem */
+    margin-top: 2.86rem; /* 40px / 14 = 2.86rem */
+}
+
+.Savings {
+    padding: 0.71rem; /* 10px / 14 = 0.71rem */
+    border: 1px solid #ccc;
+    border-radius: 0.57rem; /* 8px / 14 = 0.57rem */
+    font-size: 1.43rem; /* 20px / 14 = 1.43rem */
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+}
+
+.Budget {
+    padding: 0.71rem; /* 10px / 14 = 0.71rem */
+    border: 1px solid #ccc;
+    border-radius: 0.57rem; /* 8px / 14 = 0.57rem */
+    font-size: 1.43rem; /* 20px / 14 = 1.43rem */
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+}
+
+.Expense {
+    padding: 0.71rem; /* 10px / 14 = 0.71rem */
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 0.57rem; /* 8px / 14 = 0.57rem */
+    font-size: 1.43rem; /* 20px / 14 = 1.43rem */
+    color: black;
+    width: 8vw;
+    align-self: center;
+}
+
+#piechart {
+    margin-left: 2.14rem; /* 30px / 14 = 2.14rem */
+}
+
+#half-donutchart {
+    align-self: center;
+    margin: 1.43rem 0; /* 20px / 14 = 1.43rem */
+}
+
+.set {
+    margin-left: 2.14rem; /* 30px / 14 = 2.14rem */
+    margin-top: 3.57rem; /* 50px / 14 = 3.57rem */
+    font-size: 1.79rem; /* 25px / 14 = 1.79rem */
+}
+
+input[type='number'] {
+    padding: 0.36rem; /* 5px / 14 = 0.36rem */
+    border-radius: 0.71rem; /* 10px / 14 = 0.71rem */
+    border: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#textInput1,
+#textInput2,
+#textInput3 {
+    position: relative;
+    bottom: 0.36rem; /* 5px / 14 = 0.36rem */
+    left: 1.43rem; /* 20px / 14 = 1.43rem */
+}
+
+#textInputOvr {
+    width: 7.14rem; /* 100px / 14 = 7.14rem */
+}
+
+

@@ -1,0 +1,190 @@
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+:root {
+    --base-font-size: 16px;
+    font-size: var(--base-font-size); /* Set the base font size */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amazon Ember', sans-serif;
+}
+
+.side_bar {
+    width: 30vw;
+    height: 92vh;
+    background-color: #F6D265;
+    color: #232C37;
+    display: flex;
+    flex-direction: column;
+}
+
+.side_bar p img {
+    height: auto;
+    width: 6.75rem; /* 135px / 20 = 6.75rem */
+    position: absolute;
+    top: 8.5rem; /* 170px / 20 = 8.5rem */
+    left: 11rem; /* 220px / 20 = 11rem */
+}
+
+.content {
+    width: 75vw;
+    height: 92vh;
+    background-color: #232C37;
+    color: white;
+}
+
+.inner_conent {
+    display: flex;
+    flex-direction: row;
+}
+
+.display {
+    width: 50%;
+    height: 60vh;
+}
+
+.settings {
+    width: 50%;
+    height: 60vh;
+    padding-left: 0.5rem; /* 10px / 20 = 0.5rem */
+}
+
+.main-heading {
+    font-size: 3.5rem; /* 70px / 20 = 3.5rem */
+    font-weight: bolder;
+    margin-left: 1.5rem; /* 30px / 20 = 1.5rem */
+    margin-top: 0.75rem; /* 15px / 20 = 0.75rem */
+}
+
+.main-heading2 {
+    font-size: 1.75rem; /* 35px / 20 = 1.75rem */
+    font-weight: bolder;
+    margin-left: 1.5rem; /* 30px / 20 = 1.5rem */
+    margin-top: 0.35rem; /* 7px / 20 = 0.35rem */
+    line-height: 2rem; /* 40px / 20 = 2rem */
+}
+
+.display-heading {
+    font-size: 1.75rem; /* 35px / 20 = 1.75rem */
+    font-weight: bolder;
+    margin-left: 1.5rem; /* 30px / 20 = 1.5rem */
+    margin-top: 2.25rem; /* 45px / 20 = 2.25rem */
+    line-height: 2rem; /* 40px / 20 = 2rem */
+}
+
+.time_period-form {
+    margin-top: 2.5rem; /* 50px / 20 = 2.5rem */
+    align-self: center;
+}
+
+.time_period-select {
+    padding: 0.5rem; /* 10px / 20 = 0.5rem */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; /* 5px / 20 = 0.25rem */
+    font-size: 0.7rem; /* 14px / 20 = 0.7rem */
+    color: #333;
+}
+
+.month-select {
+    padding: 0.25rem; /* 5px / 20 = 0.25rem */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; /* 5px / 20 = 0.25rem */
+    font-size: 0.75rem; /* 15px / 20 = 0.75rem */
+    color: #333;
+    margin-left: 1.5rem; /* 30px / 20 = 1.5rem */
+    margin-top: 0.4rem; /* 8px / 20 = 0.4rem */
+}
+
+.stats {
+    padding: 0.25rem; /* 5px / 20 = 0.25rem */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; /* 5px / 20 = 0.25rem */
+    font-size: 0.75rem; /* 15px / 20 = 0.75rem */
+    color: #333;
+    margin-left: 9.5rem; /* 190px / 20 = 9.5rem */
+    margin-top: 1rem; /* 20px / 20 = 1rem */
+}
+
+.set-budget {
+    padding: 0.25rem; /* 5px / 20 = 0.25rem */
+    border: 1px solid #ccc;
+    border-radius: 0.25rem; /* 5px / 20 = 0.25rem */
+    font-size: 0.75rem; /* 15px / 20 = 0.75rem */
+    color: #333;
+    margin-left: 7.5rem; /* 150px / 20 = 7.5rem */
+    margin-top: 2rem; /* 40px / 20 = 2rem */
+}
+
+.Savings {
+    padding: 0.5rem; /* 10px / 20 = 0.5rem */
+    border: 1px solid #ccc;
+    border-radius: 0.4rem; /* 8px / 20 = 0.4rem */
+    font-size: 1rem; /* 20px / 20 = 1rem */
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+}
+
+.Budget {
+    padding: 0.5rem; /* 10px / 20 = 0.5rem */
+    border: 1px solid #ccc;
+    border-radius: 0.4rem; /* 8px / 20 = 0.4rem */
+    font-size: 1rem; /* 20px / 20 = 1rem */
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+}
+
+.Expense {
+    padding: 0.5rem; /* 10px / 20 = 0.5rem */
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 0.4rem; /* 8px / 20 = 0.4rem */
+    font-size: 1rem; /* 20px / 20 = 1rem */
+    color: black;
+    width: 8vw;
+    align-self: center;
+}
+
+#piechart {
+    margin-left: 1.5rem; /* 30px / 20 = 1.5rem */
+}
+
+#half-donutchart {
+    align-self: center;
+    margin: 1rem 0; /* 20px / 20 = 1rem */
+}
+
+.set {
+    margin-left: 1.5rem; /* 30px / 20 = 1.5rem */
+    margin-top: 2.5rem; /* 50px / 20 = 2.5rem */
+    font-size: 1.25rem; /* 25px / 20 = 1.25rem */
+}
+
+input[type='number'] {
+    padding: 0.25rem; /* 5px / 20 = 0.25rem */
+    border-radius: 0.5rem; /* 10px / 20 = 0.5rem */
+    border: transparent;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#textInput1,
+#textInput2,
+#textInput3 {
+    position: relative;
+    bottom: 0.25rem; /* 5px / 20 = 0.25rem */
+    left: 1rem; /* 20px / 20 = 1rem */
+}
+
+#textInputOvr {
+    width: 5rem; /* 100px / 20 = 5rem */
+}

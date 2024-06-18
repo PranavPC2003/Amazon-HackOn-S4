@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Stats</title>
+    <link rel="stylesheet" href="{% static 'css/homeStyle.css' %}">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var selectElement = document.getElementById('idk123');
+            changeChart(selectElement);
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            var selectElement = document.getElementById('idk1234');
+            changeChart2(selectElement);
+        });
+
+        function changeChart(event) {
+            var selectedMonth = event.options[event.selectedIndex].value;
+            var url = window.location.origin + '{% url "payment_method_data" %}';
+            var params = new URLSearchParams({ month: selectedMonth });
+            url += '?' + params.toString();
+
+            //console.log('URL:', url);
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // console.log('Data:', data);
+                    var tempList = [['Category', 'Bank cards', 'UPI', 'Amazon Pay', 'Cash']];
+                    for (var i = 0; i < 3; i++) {
+                        tempList.push(data['expenditures'][i]);
+                    }
+
+                    google.charts.load('current', { 'packages': ['corechart'] });
+                    google.charts.setOnLoadCallback(drawChart);
+
+                    function drawChart() {
+                        //console.log(tempList);
+                        var data = google.visualization.arrayToDataTable(tempList);
+                        var options = {
+                            colors: ['#00CADC', '#29ABE2', '#49C3FB', '#FFFFFF'],
+                            titleTextStyle: { color: 'white' },
+                            backgroundColor: '#232C37',
+                            isStacked: true,
+                            legend: { position: 'top', textStyle: { color: 'white' } },
+                            hAxis: { textStyle: { color: 'white' } },
+                            vAxis: { textStyle: { color: 'white' } }
+                        };
+
+                        var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
+                        chart.draw(data, options);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+        function changeChart2(event) {
+            var selectedCategory = event.options[event.selectedIndex].value;
+            var url = window.location.origin + '{% url "category_expenditure" %}';
+            var params = new URLSearchParams({ selectedcategory: selectedCategory });
+            url += '?' + params.toString();
+
+            //console.log('URL:', url);
+            fetch(url)
+                .then(response => response.json())
+                .then(data2 => {
+                    google.charts.load('current', { 'packages': ['corechart'] });
+                    google.charts.setOnLoadCallback(drawChart2);
+                    //console.log(data2['expenditures']);
+                    var tempList = [["Month", selectedCategory]];
+                    for (var i = 0; i < 12; i++) {
+                        tempList.push(data2['expenditures'][i]);
+                    }
+                    //console.log(tempList);
+                    function drawChart2() {
+                        var data = google.visualization.arrayToDataTable(tempList);
+
+                        var options = {
+
+                            hAxis: {
+                                title: "Month",
+                                titleTextStyle: { color: 'white' },
+                                textStyle: { color: 'white' }
+                            },
+                            vAxis: { minValue: 0, textStyle: { color: 'white' } },
+                            legend: { position: "none" },
+                            backgroundColor: { fill: "#232C37" },
+                            chartArea: { left: 50, top: 50, width: "70%", height: "70%" },
+                            colors: ["#69c9c9"],
+                        };
+
+                        var chart = new google.visualization.LineChart(
+                            document.getElementById("time_series")
+                        );
+
+                        chart.draw(data, options);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+        :root {
+            --base-font-size: 16px;
+            font-size: var(--base-font-size);
+            /* Set the base font size */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Amazon Ember', sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .side_bar {
+            width: 25vw;
+            height: 92vh;
+            background-color: #F6D265;
+            color: #232C37;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side_bar p img {
+            height: auto;
+            width: 6.75rem;
+            position: absolute;
+            top: 8.9rem;
+            left: 11rem;
+        }
+
+        .content {
+            width: 100vw;
+            height: 92vh;
+            background-color: #232C37;
+            color: white;
+        }
+
+        .inner_conent {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .display {
+            width: 50%;
+            height: 60vh;
+        }
+
+        .settings {
+            width: 50%;
+            height: 60vh;
+            padding-left: 0.5rem;
+            /* 10px / 20 = 0.5rem */
+        }
+
+        .main-heading {
+            font-size: 3.5rem;
+            /* 70px / 20 = 3.5rem */
+            font-weight: bolder;
+            margin-left: 1.5rem;
+            /* 30px / 20 = 1.5rem */
+            margin-top: 0.75rem;
+            /* 15px / 20 = 0.75rem */
+        }
+
+        .main-heading2 {
+            font-size: 1.75rem;
+            /* 35px / 20 = 1.75rem */
+            font-weight: bolder;
+            margin-left: 1.5rem;
+            /* 30px / 20 = 1.5rem */
+            margin-top: 0.35rem;
+            /* 7px / 20 = 0.35rem */
+            line-height: 2rem;
+            /* 40px / 20 = 2rem */
+        }
+
+        .display-heading {
+            font-size: 1.75rem;
+            /* 35px / 20 = 1.75rem */
+            font-weight: bolder;
+            margin-left: 1.5rem;
+            /* 30px / 20 = 1.5rem */
+            margin-top: 2.25rem;
+            /* 45px / 20 = 2.25rem */
+            line-height: 2rem;
+            /* 40px / 20 = 2rem */
+        }
+
+        .time_period-form {
+            margin-top: 2.5rem;
+            /* 50px / 20 = 2.5rem */
+            align-self: center;
+        }
+
+        .time_period-select {
+            padding: 0.5rem;
+            /* 10px / 20 = 0.5rem */
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            /* 5px / 20 = 0.25rem */
+            font-size: 0.7rem;
+            /* 14px / 20 = 0.7rem */
+            color: #333;
+        }
+
+        .month-select {
+            padding: 0.25rem;
+            /* border: 1px solid #ccc; */
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            color: #333;
+            margin-left: 1.3rem;
+            margin-top: 0.4rem;
+        }
+
+
+        .stats {
+            padding: 0.25rem;
+            /* 5px / 20 = 0.25rem */
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            /* 5px / 20 = 0.25rem */
+            font-size: 0.75rem;
+            /* 15px / 20 = 0.75rem */
+            color: #333;
+            margin-left: 9.5rem;
+            /* 190px / 20 = 9.5rem */
+            margin-top: 1rem;
+            /* 20px / 20 = 1rem */
+        }
+
+        .set-budget {
+            padding: 0.25rem;
+            /* 5px / 20 = 0.25rem */
+            border: 1px solid #ccc;
+            border-radius: 0.25rem;
+            /* 5px / 20 = 0.25rem */
+            font-size: 0.75rem;
+            /* 15px / 20 = 0.75rem */
+            color: #333;
+            margin-left: 7.5rem;
+            /* 150px / 20 = 7.5rem */
+            margin-top: 2rem;
+            /* 40px / 20 = 2rem */
+        }
+
+        .Savings {
+            padding: 0.5rem;
+            /* 10px / 20 = 0.5rem */
+            border: 1px solid #ccc;
+            border-radius: 0.4rem;
+            /* 8px / 20 = 0.4rem */
+            font-size: 1rem;
+            /* 20px / 20 = 1rem */
+            color: black;
+            width: 8vw;
+            font-weight: bold;
+            align-self: center;
+            position: absolute;
+            top: 18vh;
+            left: 73vw;
+        }
+
+        .Budget {
+            padding: 0.5rem;
+            /* 10px / 20 = 0.5rem */
+            border: 1px solid #ccc;
+            border-radius: 0.4rem;
+            /* 8px / 20 = 0.4rem */
+            font-size: 1rem;
+            /* 20px / 20 = 1rem */
+            color: black;
+            width: 8vw;
+            font-weight: bold;
+            align-self: center;
+        }
+
+        .Expense {
+            padding: 0.5rem;
+            /* 10px / 20 = 0.5rem */
+            font-weight: bold;
+            border: 1px solid #ccc;
+            border-radius: 0.4rem;
+            /* 8px / 20 = 0.4rem */
+            font-size: 1rem;
+            /* 20px / 20 = 1rem */
+            color: black;
+            width: 8vw;
+            align-self: center;
+            position: absolute;
+            top: 18vh;
+            left: 64vw;
+        }
+
+        #piechart {
+            margin-left: 1.5rem;
+            /* 30px / 20 = 1.5rem */
+        }
+
+        #half-donutchart {
+            align-self: center;
+            margin: 1rem 0;
+            /* 20px / 20 = 1rem */
+        }
+
+        .set {
+            margin-left: 1.5rem;
+            /* 30px / 20 = 1.5rem */
+            margin-top: 2.5rem;
+            /* 50px / 20 = 2.5rem */
+            font-size: 1.25rem;
+            /* 25px / 20 = 1.25rem */
+        }
+
+        input[type='number'] {
+            padding: 0.25rem;
+            /* 5px / 20 = 0.25rem */
+            border-radius: 0.5rem;
+            /* 10px / 20 = 0.5rem */
+            border: transparent;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        #textInput1,
+        #textInput2,
+        #textInput3 {
+            position: relative;
+            bottom: 0.25rem;
+            /* 5px / 20 = 0.25rem */
+            left: 1rem;
+            /* 20px / 20 = 1rem */
+        }
+
+        #textInputOvr {
+            width: 5rem;
+            /* 100px / 20 = 5rem */
+        }
+    </style>
+</head>
+<header>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="/home"><img src="{% static 'images/amazon_logo.png' %}" alt="logo"></a>
+        </div>
+        <div class="address">
+            <a href="#" class="deliver">Deliver</a>
+            <div class="map-icon">
+                <span class="material-symbols-outlined">location_on</span>
+                <a href="#" class="location">Delhi</a>
+            </div>
+        </div>
+
+        <div class="nav-search">
+            <select class="select-search">
+                <option>All</option>
+                <option>Clothing</option>
+                <option>Electronics</option>
+                <option>Grocery</option>
+            </select>
+            <input type="text" placeholder="Search Amazon" class="search-input">
+            <div class="search-icon">
+                <span class="material-symbols-outlined">search</span>
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="sign-in">
+            <p>Hello, {{ user.first_name }}</p>
+            <a href="/signout">
+                <span>Sign out</span>
+            </a>
+        </div>
+        {% else %}
+        <div class="sign-in">
+            <a href="/auth_login">
+                <p>Hello, sign in</p>
+                <span>Account &amp; Lists</span>
+            </a>
+        </div>
+        {% endif %}
+        <div class="returns">
+            <a href="#">
+                <p>Returns</p>
+                <span>&amp; Orders</span>
+            </a>
+        </div>
+
+        <div class="cart">
+            <a href="#">
+                <span class="material-symbols-outlined cart-icon">shopping_cart</span>
+            </a>
+            <p>Cart</p>
+        </div>
+    </nav>
+
+
+</header>
+
+<body>
+    </header>
+    <div style="display: flex;">
+        <div class="content">
+            <div class="inner_conent">
+                <div class="display">
+                    <p class="display-heading">Expenditure per <br>payment method</p>
+                    <br>
+                    <form>
+                        <select class="month-select" id="idk123" onchange="changeChart(this)">
+                            <option value="1">January</option>
+                            <option value="2"> February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6" selected>June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </form>
+                    <!-- <div id="chart"></div> -->
+                    <div id="bar_chart" style="width: 800px; height: 500px;"></div>
+                </div>
+                <div class="display">
+                    <p class="display-heading">Expenditure per <br>Month</p>
+                    <br>
+                    <form>
+                        <select class="month-select" id="idk1234" onchange="changeChart2(this)">
+                            <option value="CLOTHING" selected>Clothing</option>
+                            <option value="ELECTRONICS">Electronics</option>
+                            <option value="GROCERY">Grocery</option>
+                        </select>
+                    </form>
+                    <!-- <div id="chart"></div> -->
+                    <div id="time_series" style="width: 900px; height: 500px;"></div>
+                </div>
+                <img src="{% static 'images/chatbot-Icon.png' %}" style="    position: absolute;
+                top: 90vh;
+                left: 93vw;
+                height: 80px;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+@import url('https://fonts.cdnfonts.com/css/amazon-ember');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amazon Ember', sans-serif;
+}
+
+
+
+.content {
+    width: 100vw;
+    height: 90vh;
+    background-color: #232C37;
+    color: white;
+}
+
+.inner_conent {
+    display: flex;
+    flex-direction: row;
+}
+
+.display {
+    width: 50pc;
+    height: 60vh;
+}
+
+.settings {
+    width: 50pc;
+    height: 60vh;
+    padding-left: 10px;
+}
+
+.main-heading {
+    font-size: 70px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.main-heading2 {
+    font-size: 35px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 7px;
+    line-height: 40px;
+}
+
+.display-heading{
+    font-size: 35px;
+    font-weight: bolder;
+    margin-left: 30px;
+    margin-top: 45px;
+    line-height: 40px;
+}
+
+.time_period-form {
+    margin-top: 50px;
+    align-self: center;
+}
+.time_period-select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+.month-select{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.stats{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 190px;
+    margin-top: 20px;
+}
+.set-budget{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #333;
+    margin-left: 150px;
+    margin-top: 40px;
+}
+.Savings {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+}
+
+.Budget {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: black;
+    width: 8vw;
+    font-weight: bold;
+    align-self: center;
+   
+}
+
+.Expense {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 20px;
+    color: black;
+    width: 8vw;
+    align-self: center;
+}
+#piechart{
+    margin-left: 30px;
+}
+#half-donutchart{
+    align-self: center;
+    margin: 20px 0px 20px 0px;
+}
+
+.set{
+    margin-left: 30px;
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+input[type='number']{
+    padding: 5px;
+    border-radius: 10px;
+    border: transparent;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#textInput1,#textInput2,#textInput3{
+    position: relative;
+    bottom: 5px;
+    left: 20px;
+}
+#textInputOvr{
+    width: 100px;
+}
