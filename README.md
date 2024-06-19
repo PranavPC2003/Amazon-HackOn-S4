@@ -51,7 +51,7 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
 ### Chatbot
 * Payment query chatbot
 
-    [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/MflhO6bCONM/0.jpg)](https://www.youtube.com/watch?v=MflhO6bCONM)
+    [![IMAGE ALT TEXT HERE](YtThumbnail.jpg)](https://www.youtube.com/watch?v=MflhO6bCONM)
 
 * Transaction Query Chatbot
 
