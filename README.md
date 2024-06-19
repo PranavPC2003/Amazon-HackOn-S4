@@ -55,7 +55,7 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
 
 * Transaction Query Chatbot
 
-    [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/DsAk5kT2aU4/0.jpg)](https://www.youtube.com/watch?v=DsAk5kT2aU4)
+    [![IMAGE ALT TEXT HERE](YtThumbnail2.jpg)](https://www.youtube.com/watch?v=DsAk5kT2aU4)
 
 ### Expense Tracker
 
