@@ -63,7 +63,8 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
   
 ### Payment Recommender
 * Payment recommender workflow
-   ![screenshot](chatbot_workflow.png)
+  
+   ![screenshot](recommender_workflow.png)
 ### Expense Tracker
 
 ## Getting Started
