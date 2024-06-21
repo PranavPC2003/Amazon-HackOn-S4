@@ -31,7 +31,7 @@ The Expense Tracking Dashboard is divided into two main sections: Savings and Ex
 
 ### 2. Payment Method Recommender
 
-The Payment Method Recommender uses a sophisticated algorithm to analyze previous transactions and current available payment methods. It then recommends the most beneficial payment method for the user.
+The Payment Method Recommender uses a sophisticated algorithm to analyze previous transactions and current available payment methods. It then recommends the most beneficial payment method for the user and the overall best payment method.
 
 **Tech Stack:** Python
 
@@ -49,6 +49,10 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
 
 ## Gallery
 ### Chatbot
+* Chatbot Workflow
+  
+  ![screenshot](chatbot_workflow.png)
+  
 * Payment query chatbot
 
     [![IMAGE ALT TEXT HERE](YtThumbnail.jpg)](https://www.youtube.com/watch?v=MflhO6bCONM)
@@ -56,7 +60,10 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
 * Transaction Query Chatbot
 
     [![IMAGE ALT TEXT HERE](YtThumbnail2.jpg)](https://www.youtube.com/watch?v=DsAk5kT2aU4)
-
+  
+### Payment Recommender
+* Payment recommender workflow
+   ![screenshot](chatbot_workflow.png)
 ### Expense Tracker
 
 ## Getting Started
