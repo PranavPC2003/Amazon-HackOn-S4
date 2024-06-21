@@ -18,6 +18,9 @@ urlpatterns = [
     path('payment_page/', views.payment_page, name='payment_page'),
     path('savings_tracker/', views.savings_tracker, name='savings_tracker'),
     path('savings_tracker_data/', views.savings_tracker_data, name='savings_tracker_data'),
+    path('dynamic_order/', views.dynamic_order, name='dynamic_order'),
+    path('ai_payment_method/', views.ai_payment_method, name='ai_payment_method'),
+    path('orders_page', views.orders_page, name='orders_page'),
 ] 
 
 if settings.DEBUG:

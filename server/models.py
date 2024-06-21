@@ -1,11 +1,11 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django.db.models import UniqueConstraint
 import math
 import datetime
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    email = models.EmailField(max_length = 254, default="pranavchauhan003@gmail.com")
     img_path = "https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
     profile_pic = models.ImageField(default=img_path, upload_to='profile_pics/', null=True, blank=True)
     phone = models.CharField(max_length=10, blank=True, null=True)
@@ -50,10 +50,15 @@ class Bank_Info(models.Model):
         ('SBI', 'State Bank of India'),
         ('HDFC', 'HDFC Bank'),
         ('ICICI', 'ICICI Bank'),
-        ('PAYTM', 'Paytm'),
-        ('PHONEPE', 'PhonePe'),
-        ('AMAZON_PAY', 'Amazon Pay'),
+        ('KOTAK', 'Kotak Bank'),
+        ('AMEX', 'American Express Bank'),
+        ('Paytm', 'Paytm'),
+        ('PhonePe', 'PhonePe UPI'),
+        ('Amazon Pay', 'Amazon Pay UPI'),
         ('CASH', 'Cash'),
+        ('Paytm Wallet', 'Paytm Wallet'),
+        ('PhonePe Wallet', 'PhonePe Wallet'),
+        ('Amazon Wallet', 'Amazon Pay Wallet'),
     )
     bank_name = models.CharField(max_length=30, choices = BANK_CHOICES, null = True, blank = True)
 
@@ -61,7 +66,7 @@ class Bank_Info(models.Model):
         ('CARD', 'card payment'),
         ('UPI', 'upi'),
         ('CASH', 'cash'),
-        ('AMAZON_WALLET', 'Amazon wallet'),
+        ('WALLET', 'wallet'),
     )
 
     type = models.CharField(max_length=20, choices = TYPE_CHOICES, default='CASH')
@@ -115,6 +120,9 @@ class Set_Budget(models.Model):
     grocery_amount = models.IntegerField(default = 0)
 
     month = models.IntegerField(default=datetime.datetime.now().month)
+
+    above_75 = models.BooleanField(default=False)
+    equal_100 = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.user}: {self.date.month}"

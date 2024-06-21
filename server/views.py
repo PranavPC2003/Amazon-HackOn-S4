@@ -1,18 +1,19 @@
-from django.shortcuts import render, redirect, get_object_or_404
-#from django.http import HttpResponse
-from .models import Orders, Category, Items, Set_Budget
+from django.shortcuts import render, redirect
+from .models import Orders, Category, Items, Set_Budget, Bank_Info, UserProfile
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 import datetime
-#from django.templatetags.static import static
-#from django.conf import settings
-#import os
 from django.contrib.auth.decorators import login_required
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+import math
+import random
 
 
 def home(request):
-    latest_items = Items.objects.all().order_by('-id')[:4]
+    latest_items = Items.objects.all().order_by('-id')[:8]
     return render(request, 'server/home.html', {'latest_items': latest_items}  )
 
 def auth_login(request):
@@ -83,6 +84,12 @@ def expense_budget(request):
 
 
     return JsonResponse({'expenditures': expenditures})
+
+@login_required
+def orders_page(request):
+    user = request.user
+    orders = Orders.objects.filter(user=user).order_by('-date')
+    return render(request, 'server/orders.html', {'orders': orders})
 
 @login_required()
 def exp_tracker(request):
@@ -188,6 +195,19 @@ def category_expenditure(request):
 def more_stats(request):
     return render(request, 'server/more_stats.html')
 
+def dynamic_order(request):
+    bankDetails = request.GET.get('bankDetails')
+    bank_obj = Bank_Info.objects.get(bank_name=bankDetails)
+    disc_data = [0,0]
+
+    if bank_obj:
+        if bank_obj.perc_discount > 0:
+            disc_data[0] = bank_obj.perc_discount
+        if bank_obj.perc_cashback > 0:
+            disc_data[1] = bank_obj.perc_cashback
+
+    return JsonResponse({'disc_data': disc_data})
+
 def payment_page(request):
     item_id = request.GET.get('item')
     item = None
@@ -196,7 +216,50 @@ def payment_page(request):
     else:
         return render(request, 'server/payment.html')
     
-    return render(request, 'server/payment.html', {'item': item})
+    if request.method == 'POST':
+        bank_name = request.POST.get('paymentMethod')
+        user = request.user
+        bank_obj = None
+        try:
+            bank_obj = Bank_Info.objects.get(bank_name=bank_name)
+        except:
+            print('No bank_info')
+
+        date = datetime.datetime.now()
+
+        if bank_obj:
+            order_obj = Orders(
+                user=user,
+                date=date,
+                Bank_Details=bank_obj,
+            )
+            
+            order_obj.save()
+            order_obj.order_items.add(item)
+            order_obj.save()
+
+        try:
+            budget_obj = Set_Budget.objects.get(month=(datetime.datetime.now().month))
+            userProfileObj = UserProfile.objects.get(user=user)
+        except:
+            print('no budget')
+
+        total_expense = 26895 #static for now
+        if (total_expense+item.cost >= (budget_obj.amount*0.75) and budget_obj.above_75 == False):
+            send_budget_alert(user.first_name, budget_obj.amount, total_expense+item.cost, userProfileObj.email)
+            budget_obj.above_75 = True
+            budget_obj.save()
+        total_expense+=item.cost
+
+        if (total_expense+item.cost >= (budget_obj.amount) and budget_obj.equal_100 == False):
+            send_budget_alert(user.first_name, budget_obj.amount, total_expense+item.cost, userProfileObj.email)
+            budget_obj.equal_100 = True
+            budget_obj.save()
+        total_expense+=item.cost
+
+        return redirect(f'/exp_tracker/?payment=success')
+    
+    return render(request, 'server/payment.html', {'item': item})    
 
 def savings_tracker_data(request):
     month = request.GET.get('month')
@@ -217,3 +280,167 @@ def savings_tracker_data(request):
 
 def savings_tracker(request):
     return render(request, 'server/savings_tracker.html')
+
+
+def send_budget_alert(name, budget, expense,email):
+    percent_spent = math.ceil(((expense / budget) * 100))
+
+    # Email configuration
+    sender_email = "ashwinnegi.an@gmail.com"
+    receiver_email = email
+    password = "ksgeqtyyrtthobzp"
+    
+    # Create the email content
+    if percent_spent >= 75 and percent_spent < 100:
+        subject = "Budget Alert"
+        body = f"Dear {name},\n\nYou have spent {percent_spent:.2f}% of your total budget.\n\nRegards,\nBudget Alert System"
+
+    elif percent_spent >= 100:
+        subject = "Budget Alert"
+        body = f"Dear {name},\n\nYou have spent 100% of your total budget and exhausted your budget limit of the month.\n\nRegards,\nBudget Alert System"        
+
+    # Set up the MIME
+    message = MIMEMultipart()
+    message['From'] = sender_email
+    message['To'] = receiver_email
+    message['Subject'] = subject
+
+    # Attach the body with the msg instance
+    message.attach(MIMEText(body, 'plain'))
+
+    # Create SMTP session for sending the mail
+    try:
+        with smtplib.SMTP('smtp.gmail.com', 587) as server:  # Replace 'smtp.example.com' with the SMTP server of your email provider
+            server.starttls()  # Enable security
+            server.login(sender_email, password)  # Login with your email and password
+            text = message.as_string()
+            server.sendmail(sender_email, receiver_email, text)
+            print("Email sent successfully.")
+    except Exception as e:
+        print(f"Failed to send email: {e}")
+
+
+def ai_payment_method(request):
+    product_price = request.GET.get('product_price')
+    disc_data = [['', 0, 0], ['', 0, 0]]
+
+    best_user_method, best_user_amount, best_overall_method, best_overall_amount = get_best_payment_method(user_data, payment_methods_data, int(product_price))
+    best_user_method_bank = Bank_Info.objects.get(bank_name=best_user_method)
+
+    if best_user_method_bank:
+        disc_data[0][0] = best_user_method_bank.bank_name
+        if best_user_method_bank.perc_discount > 0:
+            disc_data[0][1] = best_user_method_bank.perc_discount
+        if best_user_method_bank.perc_cashback > 0:
+            disc_data[0][2] = best_user_method_bank.perc_cashback
+        #print(disc_data[0][0], disc_data[0][1], disc_data[0][2])
+
+    best_overall_method_bank = Bank_Info.objects.get(bank_name=best_overall_method)
+
+    if best_overall_method_bank:
+        disc_data[1][0] = best_overall_method_bank.bank_name
+        if best_overall_method_bank.perc_discount > 0:
+            disc_data[1][1] = best_overall_method_bank.perc_discount
+        if best_overall_method_bank.perc_cashback > 0:
+            disc_data[1][2] = best_overall_method_bank.perc_cashback
+        #print(disc_data)
+
+    return JsonResponse({'disc_data': disc_data})
+
+
+def calculate_final_amount(price, cashback, max_discount=None):
+    discount = price * cashback
+    if max_discount is not None:
+        discount = min(discount, max_discount)
+    final_amount = price - discount
+    return max(final_amount, 0)  # Ensure final_amount is not less than zero
+
+def get_possible_payment_methods(saved_methods, transactions, amount):
+    possible_methods = set(saved_methods)
+    
+    for transaction in transactions:
+        if transaction["amount"] <= amount:
+            possible_methods.add(transaction["method"])
+    
+    return list(possible_methods)
+
+def get_best_payment_method(user_data, all_methods, price):
+    saved_methods = user_data["saved_methods"]
+    transactions = user_data["transactions"]
+    
+    # Get possible payment methods from user's history and saved methods
+    possible_methods = get_possible_payment_methods(saved_methods, transactions, price)
+    
+    best_user_method = None
+    best_user_amount = float('inf')
+    
+    for method in possible_methods:
+        if method in all_methods:
+            details = all_methods[method]
+            if details["min_transaction"] <= price and details["success_rate"] >= 0.70:
+                final_amount = calculate_final_amount(price, details["cashback"], details.get("max_discount"))
+                if final_amount < best_user_amount:
+                    best_user_amount = final_amount
+                    best_user_method = method
+    
+    best_overall_method = None
+    best_overall_amount = float('inf')
+    
+    for method, details in all_methods.items():
+        if details["min_transaction"] <= price and details["success_rate"] >= 0.70:
+            final_amount = calculate_final_amount(price, details["cashback"], details.get("max_discount"))
+            if final_amount < best_overall_amount:
+                best_overall_amount = final_amount
+                best_overall_method = method
+    
+    return best_user_method, best_user_amount, best_overall_method, best_overall_amount
+
+#mock data for running the algorithm
+user_db = {
+    "user_id": 1,
+    "saved_methods": ["ICICI", "Paytm", "Amazon Wallet", "HDFC"],
+    "transactions": [
+        # High amounts (usually cards, sometimes UPI or Amazon Pay Wallet)
+        {"amount": 5000, "method": "ICICI"},
+        {"amount": 6000, "method": "HDFC"},
+        {"amount": 7000, "method": "ICICI"},
+        {"amount": 8000, "method": "HDFC"},
+        {"amount": 9000, "method": "HDFC"},
+
+        # Moderate amounts (usually UPI, sometimes cards or Amazon Pay Wallet)
+        {"amount": 2000, "method": "Paytm"},
+        {"amount": 2500, "method": "Paytm"},
+        {"amount": 3000, "method": "PhonePe"},
+        {"amount": 3500, "method": "PhonePe"},
+        {"amount": 4000, "method": "Paytm"},
+
+        # Low amounts (usually Amazon Pay Wallet, sometimes UPI or cards)
+        {"amount": 500, "method": "Amazon Wallet"},
+        {"amount": 600, "method": "Amazon Wallet"},
+        {"amount": 700, "method": "Amazon Wallet"},
+        {"amount": 800, "method": "Amazon Wallet"},
+        {"amount": 900, "method": "PhonePe"},
+        {"amount": 1000, "method": "Amazon Wallet"},
+        {"amount": 1200, "method": "Paytm"},
+        {"amount": 1500, "method": "PhonePe"},
+        {"amount": 1800, "method": "Paytm"}
+    ]
+}
+
+payment_methods_db = {
+    "ICICI": {"type": "card", "success_rate": 0.98, "cashback": 0.02, "max_discount": 100, "min_transaction": 1000},
+    "HDFC": {"type": "card", "success_rate": 0.67, "cashback": 0.03, "max_discount": 120, "min_transaction": 1500},
+    "CITI": {"type": "card", "success_rate": 0.96, "cashback": 0.04, "max_discount": 150, "min_transaction": 500},
+    "KOTAK": {"type": "card", "success_rate": 0.95, "cashback": 0.05, "max_discount": 180, "min_transaction": 500},
+    "AMEX": {"type": "card", "success_rate": 0.99, "cashback": 0.06, "max_discount": 200, "min_transaction": 2000},
+    "Amazon Pay": {"type": "upi", "success_rate": 0.98, "cashback": 0.05, "max_discount": 150, "min_transaction": 500},
+    "Paytm": {"type": "upi", "success_rate": 0.53, "cashback": 0.04, "max_discount": 60, "min_transaction": 100},
+    "PhonePe": {"type": "upi", "success_rate": 0.96, "cashback": 0.03, "max_discount": 70, "min_transaction": 100},
+    "Amazon Wallet": {"type": "wallet", "success_rate": 0.97, "cashback": 0.03, "max_discount": 40, "min_transaction": 50},
+    "Paytm Wallet": {"type": "wallet", "success_rate": 0.77, "cashback": 0.02, "max_discount": 45, "min_transaction": 50},
+    "PhonePe Wallet": {"type": "wallet", "success_rate": 0.96, "cashback": 0.01, "max_discount": 50, "min_transaction": 50}
+}
+
+
+user_data = user_db
+payment_methods_data = payment_methods_db

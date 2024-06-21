@@ -1,0 +1,501 @@
+Transaction ID,Payment Method,Transaction Amount,Savings,Category,Month,Year
+T-0001,UPI,922.65,85.81,Grocery,July,2024
+T-0002,UPI,960.68,122.14,Electronics,March,2024
+T-0003,Bank Card,564.77,40.73,Clothing,October,2024
+T-0004,Cash on Delivery,830.29,140.08,Grocery,March,2024
+T-0005,Bank Card,883.34,61.93,Electronics,May,2024
+T-0006,Bank Card,705.83,130.3,Clothing,March,2024
+T-0007,Bank Card,636.26,123.77,Grocery,August,2024
+T-0008,Bank Card,805.78,107.62,Electronics,September,2024
+T-0009,Cash on Delivery,876.43,142.26,Clothing,April,2024
+T-0010,UPI,685.49,83.11,Clothing,May,2024
+T-0011,Cash on Delivery,241.49,43.75,Grocery,September,2024
+T-0012,UPI,454.04,54.43,Clothing,March,2024
+T-0013,Bank Card,762.42,141.82,Electronics,January,2024
+T-0014,Cash on Delivery,999.22,149.12,Grocery,December,2024
+T-0015,Bank Card,825.46,55.73,Clothing,March,2024
+T-0016,Cash on Delivery,704.15,100.02,Grocery,November,2024
+T-0017,Cash on Delivery,114.74,14.29,Electronics,March,2024
+T-0018,Bank Card,237.79,30.21,Grocery,April,2024
+T-0019,UPI,413.38,27.78,Grocery,October,2024
+T-0020,UPI,235.36,34.09,Electronics,October,2024
+T-0021,UPI,132.03,6.97,Clothing,March,2024
+T-0022,Bank Card,818.36,54.36,Electronics,July,2024
+T-0023,UPI,939.37,0.97,Grocery,July,2024
+T-0024,Bank Card,645.06,80.48,Electronics,April,2024
+T-0025,UPI,136.41,22.12,Electronics,June,2024
+T-0026,Bank Card,783.44,53.45,Electronics,March,2024
+T-0027,Cash on Delivery,404.91,16.0,Grocery,June,2024
+T-0028,Bank Card,859.45,103.82,Clothing,March,2024
+T-0029,Bank Card,882.17,112.09,Electronics,October,2024
+T-0030,Bank Card,642.75,45.19,Grocery,January,2024
+T-0031,Bank Card,854.94,75.29,Clothing,June,2024
+T-0032,Bank Card,547.31,88.56,Electronics,April,2024
+T-0033,Cash on Delivery,743.81,90.3,Grocery,May,2024
+T-0034,Cash on Delivery,53.32,4.17,Clothing,May,2024
+T-0035,Bank Card,856.22,77.65,Grocery,September,2024
+T-0036,UPI,369.08,17.64,Grocery,February,2024
+T-0037,Cash on Delivery,242.16,32.75,Clothing,May,2024
+T-0038,UPI,286.37,41.36,Clothing,October,2024
+T-0039,UPI,380.21,14.42,Grocery,December,2024
+T-0040,UPI,936.7,183.89,Clothing,October,2024
+T-0041,Bank Card,335.34,27.65,Electronics,September,2024
+T-0042,Bank Card,106.07,10.56,Clothing,June,2024
+T-0043,Cash on Delivery,886.24,45.44,Grocery,August,2024
+T-0044,Cash on Delivery,555.02,102.17,Clothing,March,2024
+T-0045,Cash on Delivery,922.37,65.45,Electronics,November,2024
+T-0046,UPI,52.15,9.34,Clothing,March,2024
+T-0047,Bank Card,568.02,77.98,Grocery,December,2024
+T-0048,Cash on Delivery,292.69,37.58,Grocery,May,2024
+T-0049,Bank Card,730.62,39.37,Clothing,July,2024
+T-0050,Cash on Delivery,329.45,23.99,Grocery,April,2024
+T-0051,Cash on Delivery,673.65,2.77,Electronics,August,2024
+T-0052,Bank Card,928.24,105.89,Grocery,October,2024
+T-0053,UPI,791.2,133.89,Electronics,February,2024
+T-0054,UPI,488.12,30.37,Electronics,October,2024
+T-0055,Bank Card,37.27,5.55,Clothing,June,2024
+T-0056,UPI,196.57,3.24,Electronics,July,2024
+T-0057,UPI,547.33,103.59,Clothing,February,2024
+T-0058,Bank Card,945.82,103.36,Electronics,March,2024
+T-0059,Cash on Delivery,827.8,106.04,Grocery,September,2024
+T-0060,UPI,235.01,13.56,Electronics,April,2024
+T-0061,Bank Card,222.97,15.27,Grocery,May,2024
+T-0062,Cash on Delivery,30.32,2.42,Grocery,October,2024
+T-0063,Bank Card,897.18,38.88,Grocery,March,2024
+T-0064,Bank Card,522.68,11.84,Clothing,July,2024
+T-0065,Bank Card,137.05,17.64,Grocery,July,2024
+T-0066,UPI,462.46,55.43,Clothing,September,2024
+T-0067,UPI,241.63,47.01,Electronics,August,2024
+T-0068,Bank Card,430.83,72.92,Electronics,October,2024
+T-0069,UPI,843.47,2.56,Grocery,June,2024
+T-0070,Cash on Delivery,694.82,19.08,Grocery,September,2024
+T-0071,UPI,406.07,68.93,Clothing,December,2024
+T-0072,UPI,385.4,9.61,Clothing,March,2024
+T-0073,Cash on Delivery,231.71,25.93,Electronics,August,2024
+T-0074,UPI,897.71,138.14,Grocery,February,2024
+T-0075,Cash on Delivery,990.91,11.91,Electronics,December,2024
+T-0076,Bank Card,399.93,4.48,Clothing,January,2024
+T-0077,UPI,951.83,103.08,Clothing,November,2024
+T-0078,UPI,896.07,14.14,Electronics,February,2024
+T-0079,Bank Card,524.6,29.81,Clothing,September,2024
+T-0080,Cash on Delivery,608.64,66.56,Clothing,September,2024
+T-0081,UPI,353.41,1.93,Electronics,March,2024
+T-0082,UPI,119.97,13.31,Grocery,July,2024
+T-0083,UPI,692.68,124.97,Clothing,September,2024
+T-0084,Cash on Delivery,667.78,5.04,Clothing,April,2024
+T-0085,Bank Card,867.82,56.74,Electronics,October,2024
+T-0086,Cash on Delivery,655.82,29.16,Grocery,November,2024
+T-0087,UPI,358.0,41.89,Electronics,August,2024
+T-0088,Cash on Delivery,318.42,48.69,Clothing,April,2024
+T-0089,Bank Card,108.01,10.59,Electronics,April,2024
+T-0090,UPI,269.96,51.1,Clothing,December,2024
+T-0091,UPI,699.12,19.99,Grocery,July,2024
+T-0092,Bank Card,177.62,35.23,Clothing,June,2024
+T-0093,UPI,887.12,3.12,Clothing,March,2024
+T-0094,UPI,859.21,113.05,Electronics,September,2024
+T-0095,UPI,676.52,90.83,Grocery,October,2024
+T-0096,Cash on Delivery,15.95,0.58,Clothing,October,2024
+T-0097,UPI,573.09,100.29,Clothing,October,2024
+T-0098,Cash on Delivery,827.84,72.08,Grocery,June,2024
+T-0099,Cash on Delivery,882.34,175.24,Clothing,July,2024
+T-0100,Bank Card,542.22,23.07,Grocery,August,2024
+T-0101,Bank Card,566.25,34.35,Clothing,January,2024
+T-0102,UPI,746.48,44.82,Clothing,February,2024
+T-0103,UPI,940.91,151.8,Electronics,September,2024
+T-0104,Cash on Delivery,475.7,83.31,Grocery,October,2024
+T-0105,Cash on Delivery,59.78,0.89,Clothing,May,2024
+T-0106,Bank Card,241.89,24.38,Electronics,July,2024
+T-0107,UPI,65.61,5.63,Grocery,May,2024
+T-0108,Bank Card,647.73,127.68,Clothing,July,2024
+T-0109,Cash on Delivery,331.32,31.55,Clothing,February,2024
+T-0110,Cash on Delivery,63.7,5.15,Clothing,August,2024
+T-0111,Cash on Delivery,568.76,74.66,Clothing,June,2024
+T-0112,UPI,942.57,89.09,Grocery,July,2024
+T-0113,UPI,241.26,17.31,Clothing,April,2024
+T-0114,UPI,878.08,129.66,Electronics,July,2024
+T-0115,UPI,183.72,34.38,Clothing,February,2024
+T-0116,UPI,123.18,18.63,Electronics,March,2024
+T-0117,UPI,290.99,18.81,Electronics,March,2024
+T-0118,Cash on Delivery,381.81,31.77,Clothing,June,2024
+T-0119,Bank Card,964.51,100.79,Electronics,May,2024
+T-0120,UPI,657.07,64.54,Electronics,December,2024
+T-0121,UPI,735.61,36.64,Grocery,October,2024
+T-0122,Cash on Delivery,348.82,46.11,Grocery,March,2024
+T-0123,UPI,306.3,34.77,Clothing,April,2024
+T-0124,UPI,768.89,71.21,Clothing,October,2024
+T-0125,Cash on Delivery,626.19,86.27,Grocery,March,2024
+T-0126,Cash on Delivery,469.96,51.77,Grocery,May,2024
+T-0127,UPI,956.4,185.6,Grocery,June,2024
+T-0128,UPI,321.34,17.65,Clothing,February,2024
+T-0129,Cash on Delivery,953.06,56.16,Grocery,September,2024
+T-0130,Cash on Delivery,888.84,75.35,Electronics,February,2024
+T-0131,UPI,186.0,4.95,Clothing,March,2024
+T-0132,Cash on Delivery,722.26,54.64,Clothing,December,2024
+T-0133,Cash on Delivery,506.02,35.72,Clothing,June,2024
+T-0134,Bank Card,112.75,7.34,Electronics,August,2024
+T-0135,Cash on Delivery,822.71,135.97,Grocery,November,2024
+T-0136,Cash on Delivery,459.73,62.51,Grocery,December,2024
+T-0137,UPI,332.56,39.94,Electronics,March,2024
+T-0138,UPI,462.05,21.47,Electronics,May,2024
+T-0139,Bank Card,966.05,83.37,Electronics,March,2024
+T-0140,Cash on Delivery,931.02,21.8,Clothing,June,2024
+T-0141,UPI,602.69,5.25,Clothing,March,2024
+T-0142,Cash on Delivery,416.68,18.29,Electronics,May,2024
+T-0143,Bank Card,733.86,140.84,Clothing,June,2024
+T-0144,Bank Card,328.1,16.89,Grocery,September,2024
+T-0145,Cash on Delivery,585.94,80.29,Electronics,December,2024
+T-0146,UPI,303.85,8.1,Clothing,August,2024
+T-0147,Cash on Delivery,132.77,18.73,Electronics,August,2024
+T-0148,Bank Card,788.62,2.63,Clothing,November,2024
+T-0149,UPI,271.36,17.92,Grocery,November,2024
+T-0150,UPI,12.62,2.42,Clothing,August,2024
+T-0151,Bank Card,329.29,6.55,Clothing,January,2024
+T-0152,UPI,589.9,111.13,Grocery,November,2024
+T-0153,Cash on Delivery,875.57,66.76,Clothing,July,2024
+T-0154,UPI,109.25,5.32,Clothing,March,2024
+T-0155,Cash on Delivery,988.87,175.88,Grocery,March,2024
+T-0156,Bank Card,712.31,91.52,Grocery,December,2024
+T-0157,UPI,176.86,26.89,Electronics,April,2024
+T-0158,Bank Card,545.47,46.58,Electronics,January,2024
+T-0159,Cash on Delivery,777.88,17.19,Grocery,December,2024
+T-0160,Bank Card,103.05,17.36,Grocery,November,2024
+T-0161,UPI,101.69,19.8,Grocery,January,2024
+T-0162,Bank Card,211.14,41.52,Electronics,December,2024
+T-0163,UPI,973.92,103.8,Electronics,November,2024
+T-0164,Cash on Delivery,948.67,113.58,Grocery,December,2024
+T-0165,UPI,874.99,11.34,Grocery,April,2024
+T-0166,Cash on Delivery,79.67,4.97,Electronics,July,2024
+T-0167,Bank Card,244.03,38.56,Grocery,April,2024
+T-0168,UPI,182.71,4.69,Grocery,February,2024
+T-0169,Cash on Delivery,275.48,16.39,Grocery,December,2024
+T-0170,Bank Card,44.51,8.17,Electronics,January,2024
+T-0171,UPI,914.68,97.65,Clothing,February,2024
+T-0172,UPI,156.33,19.19,Grocery,November,2024
+T-0173,Cash on Delivery,274.02,42.68,Grocery,September,2024
+T-0174,Bank Card,767.6,46.8,Clothing,March,2024
+T-0175,UPI,21.1,3.63,Clothing,July,2024
+T-0176,Bank Card,585.1,28.72,Clothing,February,2024
+T-0177,Bank Card,86.8,3.84,Grocery,January,2024
+T-0178,UPI,89.13,3.87,Grocery,December,2024
+T-0179,Bank Card,365.34,57.34,Electronics,June,2024
+T-0180,UPI,142.67,15.1,Clothing,May,2024
+T-0181,Bank Card,419.2,75.81,Electronics,July,2024
+T-0182,Bank Card,639.43,63.16,Electronics,September,2024
+T-0183,UPI,508.27,68.2,Electronics,February,2024
+T-0184,Bank Card,307.1,44.53,Electronics,July,2024
+T-0185,UPI,276.03,53.76,Grocery,May,2024
+T-0186,Cash on Delivery,593.35,76.92,Clothing,January,2024
+T-0187,Bank Card,240.29,21.8,Clothing,June,2024
+T-0188,Cash on Delivery,271.03,40.58,Grocery,October,2024
+T-0189,Cash on Delivery,155.53,12.03,Electronics,August,2024
+T-0190,Cash on Delivery,151.97,1.63,Grocery,January,2024
+T-0191,Cash on Delivery,96.95,17.83,Grocery,October,2024
+T-0192,Bank Card,141.85,16.61,Electronics,July,2024
+T-0193,Cash on Delivery,105.54,12.41,Clothing,May,2024
+T-0194,Cash on Delivery,571.97,3.84,Grocery,May,2024
+T-0195,Bank Card,736.7,97.9,Grocery,April,2024
+T-0196,Bank Card,823.67,116.31,Electronics,December,2024
+T-0197,UPI,607.06,30.17,Electronics,June,2024
+T-0198,UPI,785.02,47.32,Electronics,December,2024
+T-0199,Cash on Delivery,423.69,73.6,Clothing,March,2024
+T-0200,Bank Card,634.31,37.45,Electronics,November,2024
+T-0201,Cash on Delivery,386.39,60.65,Electronics,February,2024
+T-0202,Bank Card,461.31,23.46,Grocery,January,2024
+T-0203,Bank Card,567.33,49.63,Clothing,December,2024
+T-0204,UPI,984.62,117.21,Electronics,January,2024
+T-0205,Cash on Delivery,83.15,10.76,Grocery,January,2024
+T-0206,Cash on Delivery,811.18,99.79,Grocery,August,2024
+T-0207,UPI,600.62,79.93,Electronics,August,2024
+T-0208,Cash on Delivery,911.56,74.13,Grocery,May,2024
+T-0209,Bank Card,190.99,5.06,Electronics,September,2024
+T-0210,Cash on Delivery,274.26,47.68,Grocery,May,2024
+T-0211,Bank Card,81.22,2.31,Clothing,February,2024
+T-0212,Cash on Delivery,342.73,1.3,Clothing,October,2024
+T-0213,Cash on Delivery,434.43,17.02,Grocery,September,2024
+T-0214,UPI,98.07,10.16,Grocery,September,2024
+T-0215,Bank Card,869.41,56.41,Electronics,May,2024
+T-0216,Bank Card,94.52,3.83,Clothing,June,2024
+T-0217,Bank Card,174.9,16.14,Clothing,June,2024
+T-0218,Bank Card,191.41,20.19,Grocery,November,2024
+T-0219,UPI,176.04,4.1,Grocery,February,2024
+T-0220,Bank Card,439.18,8.24,Clothing,November,2024
+T-0221,UPI,396.15,4.78,Electronics,April,2024
+T-0222,UPI,721.38,143.09,Electronics,January,2024
+T-0223,Bank Card,279.8,36.51,Clothing,April,2024
+T-0224,Bank Card,782.69,35.35,Electronics,May,2024
+T-0225,Bank Card,396.79,26.89,Electronics,November,2024
+T-0226,Cash on Delivery,998.1,11.54,Grocery,October,2024
+T-0227,Cash on Delivery,356.97,25.55,Clothing,December,2024
+T-0228,Cash on Delivery,599.8,14.74,Electronics,March,2024
+T-0229,UPI,987.75,134.0,Electronics,November,2024
+T-0230,Bank Card,27.35,3.77,Clothing,May,2024
+T-0231,Bank Card,345.88,34.97,Clothing,May,2024
+T-0232,UPI,709.11,33.1,Electronics,July,2024
+T-0233,UPI,871.59,52.37,Electronics,February,2024
+T-0234,Bank Card,567.37,31.6,Electronics,January,2024
+T-0235,Cash on Delivery,470.87,31.72,Electronics,September,2024
+T-0236,Bank Card,792.25,129.69,Electronics,July,2024
+T-0237,Bank Card,183.74,30.56,Grocery,January,2024
+T-0238,UPI,108.76,15.73,Electronics,November,2024
+T-0239,Bank Card,308.58,3.69,Electronics,August,2024
+T-0240,Bank Card,172.0,18.92,Grocery,January,2024
+T-0241,Bank Card,705.36,67.76,Electronics,January,2024
+T-0242,Bank Card,309.63,22.07,Clothing,March,2024
+T-0243,UPI,589.07,28.61,Clothing,August,2024
+T-0244,Cash on Delivery,47.03,2.27,Grocery,March,2024
+T-0245,UPI,779.62,28.49,Electronics,October,2024
+T-0246,Bank Card,56.35,7.44,Grocery,October,2024
+T-0247,UPI,406.27,25.92,Electronics,August,2024
+T-0248,Cash on Delivery,971.22,37.19,Electronics,December,2024
+T-0249,UPI,895.35,134.72,Grocery,October,2024
+T-0250,Cash on Delivery,581.12,75.37,Clothing,December,2024
+T-0251,Cash on Delivery,819.34,12.0,Grocery,September,2024
+T-0252,UPI,78.67,1.91,Electronics,May,2024
+T-0253,Cash on Delivery,414.64,10.82,Grocery,December,2024
+T-0254,Bank Card,866.03,115.66,Electronics,May,2024
+T-0255,UPI,514.65,88.99,Clothing,May,2024
+T-0256,Bank Card,783.33,89.9,Grocery,January,2024
+T-0257,Cash on Delivery,278.69,48.81,Clothing,April,2024
+T-0258,Bank Card,848.53,154.56,Grocery,August,2024
+T-0259,Cash on Delivery,174.62,23.42,Electronics,March,2024
+T-0260,Bank Card,337.73,52.46,Grocery,February,2024
+T-0261,UPI,169.82,1.98,Grocery,November,2024
+T-0262,Cash on Delivery,720.95,54.16,Clothing,April,2024
+T-0263,Cash on Delivery,854.69,42.15,Grocery,April,2024
+T-0264,Cash on Delivery,867.53,88.16,Grocery,June,2024
+T-0265,Bank Card,900.34,61.87,Clothing,October,2024
+T-0266,Bank Card,228.02,22.47,Clothing,December,2024
+T-0267,Cash on Delivery,482.24,92.1,Electronics,March,2024
+T-0268,Bank Card,816.88,75.26,Electronics,June,2024
+T-0269,Bank Card,730.23,88.41,Grocery,May,2024
+T-0270,Bank Card,195.79,11.15,Clothing,August,2024
+T-0271,Cash on Delivery,84.54,13.2,Clothing,August,2024
+T-0272,Bank Card,57.0,10.33,Clothing,November,2024
+T-0273,Bank Card,859.98,164.5,Clothing,October,2024
+T-0274,Bank Card,888.26,77.93,Grocery,May,2024
+T-0275,UPI,777.67,50.39,Electronics,February,2024
+T-0276,UPI,206.47,39.51,Clothing,July,2024
+T-0277,Bank Card,714.8,45.43,Grocery,December,2024
+T-0278,Cash on Delivery,445.24,46.38,Clothing,September,2024
+T-0279,Bank Card,399.07,31.06,Grocery,April,2024
+T-0280,Cash on Delivery,329.42,53.39,Electronics,September,2024
+T-0281,Bank Card,121.32,5.94,Grocery,March,2024
+T-0282,Bank Card,867.59,155.26,Clothing,October,2024
+T-0283,Cash on Delivery,943.2,28.97,Clothing,October,2024
+T-0284,Cash on Delivery,554.8,21.3,Grocery,January,2024
+T-0285,Bank Card,850.53,134.94,Grocery,November,2024
+T-0286,UPI,279.8,33.03,Clothing,April,2024
+T-0287,UPI,374.59,64.56,Grocery,July,2024
+T-0288,Cash on Delivery,485.71,13.04,Electronics,June,2024
+T-0289,UPI,900.81,118.66,Clothing,April,2024
+T-0290,UPI,405.03,10.61,Electronics,August,2024
+T-0291,Cash on Delivery,40.13,0.59,Electronics,April,2024
+T-0292,UPI,699.02,18.17,Grocery,February,2024
+T-0293,Cash on Delivery,88.94,7.47,Electronics,July,2024
+T-0294,Cash on Delivery,297.93,1.83,Electronics,October,2024
+T-0295,Bank Card,612.99,81.5,Electronics,March,2024
+T-0296,Bank Card,853.42,34.28,Clothing,February,2024
+T-0297,UPI,103.92,15.84,Clothing,January,2024
+T-0298,UPI,176.38,14.35,Clothing,May,2024
+T-0299,UPI,260.15,9.35,Grocery,November,2024
+T-0300,Bank Card,412.18,79.23,Electronics,June,2024
+T-0301,UPI,903.79,9.6,Grocery,July,2024
+T-0302,Bank Card,364.78,50.5,Grocery,July,2024
+T-0303,UPI,575.94,73.67,Electronics,January,2024
+T-0304,UPI,647.85,90.4,Grocery,July,2024
+T-0305,UPI,340.71,42.38,Electronics,April,2024
+T-0306,Cash on Delivery,856.19,64.78,Electronics,January,2024
+T-0307,Cash on Delivery,991.48,184.96,Electronics,March,2024
+T-0308,Cash on Delivery,524.97,71.09,Grocery,November,2024
+T-0309,UPI,441.56,10.05,Clothing,August,2024
+T-0310,UPI,856.32,30.81,Clothing,February,2024
+T-0311,Cash on Delivery,543.12,107.77,Grocery,February,2024
+T-0312,UPI,264.23,23.87,Grocery,October,2024
+T-0313,Cash on Delivery,184.73,28.6,Electronics,September,2024
+T-0314,Bank Card,710.18,2.95,Grocery,November,2024
+T-0315,Bank Card,450.79,51.88,Electronics,September,2024
+T-0316,Cash on Delivery,196.1,2.63,Grocery,August,2024
+T-0317,UPI,429.33,84.38,Grocery,October,2024
+T-0318,Bank Card,670.85,120.87,Electronics,August,2024
+T-0319,UPI,742.79,144.92,Electronics,October,2024
+T-0320,UPI,374.79,54.01,Grocery,May,2024
+T-0321,Bank Card,36.07,0.14,Electronics,November,2024
+T-0322,Bank Card,720.9,2.17,Grocery,July,2024
+T-0323,Cash on Delivery,657.06,24.44,Grocery,March,2024
+T-0324,Bank Card,95.81,14.05,Electronics,November,2024
+T-0325,UPI,88.46,5.23,Clothing,December,2024
+T-0326,Bank Card,876.51,1.97,Electronics,November,2024
+T-0327,Bank Card,245.61,10.37,Electronics,May,2024
+T-0328,Cash on Delivery,456.92,44.33,Electronics,July,2024
+T-0329,UPI,197.22,8.63,Clothing,April,2024
+T-0330,Cash on Delivery,783.78,105.9,Grocery,January,2024
+T-0331,Bank Card,410.08,54.25,Electronics,January,2024
+T-0332,Cash on Delivery,880.55,47.17,Grocery,September,2024
+T-0333,UPI,506.4,11.83,Grocery,March,2024
+T-0334,UPI,64.48,1.75,Clothing,October,2024
+T-0335,Cash on Delivery,21.09,4.14,Clothing,April,2024
+T-0336,UPI,96.88,18.84,Grocery,April,2024
+T-0337,Cash on Delivery,847.25,143.89,Grocery,January,2024
+T-0338,Bank Card,724.57,27.65,Clothing,December,2024
+T-0339,UPI,971.71,16.77,Grocery,January,2024
+T-0340,Bank Card,117.71,22.79,Clothing,September,2024
+T-0341,Bank Card,731.02,140.84,Electronics,June,2024
+T-0342,Cash on Delivery,41.25,2.32,Clothing,March,2024
+T-0343,UPI,954.53,66.02,Clothing,May,2024
+T-0344,Cash on Delivery,720.05,77.01,Grocery,September,2024
+T-0345,Cash on Delivery,606.79,73.28,Grocery,November,2024
+T-0346,Bank Card,549.96,9.83,Clothing,May,2024
+T-0347,UPI,792.07,86.99,Electronics,December,2024
+T-0348,Bank Card,342.55,38.98,Electronics,November,2024
+T-0349,Cash on Delivery,851.11,29.46,Clothing,July,2024
+T-0350,Cash on Delivery,989.57,28.11,Grocery,April,2024
+T-0351,Cash on Delivery,98.59,16.51,Electronics,April,2024
+T-0352,Cash on Delivery,13.1,0.68,Electronics,November,2024
+T-0353,UPI,634.04,119.55,Electronics,April,2024
+T-0354,UPI,203.95,25.65,Clothing,July,2024
+T-0355,Cash on Delivery,349.47,50.08,Grocery,November,2024
+T-0356,Bank Card,61.21,1.4,Electronics,February,2024
+T-0357,Bank Card,868.68,6.59,Electronics,July,2024
+T-0358,Bank Card,679.9,92.2,Clothing,March,2024
+T-0359,Bank Card,919.02,81.29,Grocery,November,2024
+T-0360,UPI,584.56,71.69,Electronics,April,2024
+T-0361,Cash on Delivery,98.73,17.76,Electronics,October,2024
+T-0362,Cash on Delivery,653.25,27.39,Grocery,September,2024
+T-0363,UPI,999.83,124.76,Clothing,January,2024
+T-0364,Bank Card,697.81,80.19,Grocery,July,2024
+T-0365,Bank Card,543.03,107.16,Clothing,October,2024
+T-0366,Cash on Delivery,265.24,34.09,Electronics,December,2024
+T-0367,Bank Card,928.87,15.22,Clothing,November,2024
+T-0368,UPI,628.7,61.03,Grocery,May,2024
+T-0369,Cash on Delivery,629.1,32.17,Electronics,October,2024
+T-0370,UPI,156.13,17.15,Electronics,May,2024
+T-0371,Cash on Delivery,642.64,94.4,Clothing,December,2024
+T-0372,Cash on Delivery,741.75,98.27,Grocery,November,2024
+T-0373,Cash on Delivery,852.46,72.94,Grocery,June,2024
+T-0374,UPI,78.82,14.37,Grocery,May,2024
+T-0375,Bank Card,412.12,47.75,Clothing,October,2024
+T-0376,UPI,722.29,78.55,Grocery,October,2024
+T-0377,Cash on Delivery,86.44,15.69,Clothing,December,2024
+T-0378,Cash on Delivery,116.92,20.81,Electronics,August,2024
+T-0379,Cash on Delivery,862.33,11.86,Clothing,April,2024
+T-0380,UPI,866.93,155.45,Electronics,May,2024
+T-0381,Bank Card,977.26,49.05,Clothing,August,2024
+T-0382,Cash on Delivery,523.48,9.28,Clothing,September,2024
+T-0383,Bank Card,124.16,3.51,Electronics,May,2024
+T-0384,Cash on Delivery,84.16,10.23,Clothing,February,2024
+T-0385,Bank Card,451.77,14.18,Clothing,June,2024
+T-0386,UPI,57.66,6.13,Grocery,June,2024
+T-0387,Cash on Delivery,478.63,69.99,Electronics,January,2024
+T-0388,Cash on Delivery,892.8,29.06,Clothing,July,2024
+T-0389,Bank Card,203.92,23.05,Clothing,July,2024
+T-0390,Cash on Delivery,156.46,2.45,Clothing,June,2024
+T-0391,UPI,206.41,37.58,Electronics,February,2024
+T-0392,UPI,923.7,103.85,Electronics,November,2024
+T-0393,UPI,191.78,6.02,Electronics,December,2024
+T-0394,UPI,952.6,39.86,Electronics,February,2024
+T-0395,Cash on Delivery,129.48,10.73,Clothing,December,2024
+T-0396,UPI,757.03,14.98,Electronics,September,2024
+T-0397,UPI,532.44,53.73,Electronics,February,2024
+T-0398,Cash on Delivery,798.77,122.76,Clothing,July,2024
+T-0399,UPI,821.4,24.09,Grocery,November,2024
+T-0400,Bank Card,264.79,47.3,Grocery,September,2024
+T-0401,UPI,296.22,29.61,Grocery,August,2024
+T-0402,UPI,73.97,11.65,Electronics,October,2024
+T-0403,UPI,760.14,94.33,Clothing,August,2024
+T-0404,Cash on Delivery,887.24,27.27,Grocery,January,2024
+T-0405,Bank Card,576.52,70.92,Clothing,May,2024
+T-0406,Bank Card,400.88,77.88,Grocery,September,2024
+T-0407,UPI,72.33,0.35,Clothing,December,2024
+T-0408,Cash on Delivery,578.99,101.39,Grocery,February,2024
+T-0409,UPI,64.01,9.21,Electronics,November,2024
+T-0410,UPI,174.58,34.34,Clothing,May,2024
+T-0411,UPI,176.46,16.22,Clothing,July,2024
+T-0412,Cash on Delivery,461.3,61.36,Grocery,December,2024
+T-0413,Cash on Delivery,135.1,26.99,Grocery,September,2024
+T-0414,Cash on Delivery,155.28,23.7,Grocery,June,2024
+T-0415,Bank Card,386.11,61.03,Electronics,December,2024
+T-0416,UPI,535.27,97.53,Grocery,February,2024
+T-0417,UPI,393.64,40.4,Clothing,January,2024
+T-0418,Cash on Delivery,11.38,1.79,Grocery,March,2024
+T-0419,UPI,184.69,13.53,Clothing,December,2024
+T-0420,UPI,173.36,23.61,Electronics,January,2024
+T-0421,Bank Card,920.64,14.21,Clothing,January,2024
+T-0422,Cash on Delivery,880.4,68.85,Grocery,July,2024
+T-0423,UPI,105.31,7.63,Grocery,November,2024
+T-0424,UPI,37.86,6.78,Electronics,July,2024
+T-0425,Cash on Delivery,200.88,21.79,Clothing,October,2024
+T-0426,Bank Card,323.08,26.69,Clothing,February,2024
+T-0427,UPI,171.65,25.33,Clothing,February,2024
+T-0428,Bank Card,489.36,78.07,Clothing,March,2024
+T-0429,Bank Card,742.05,57.75,Electronics,January,2024
+T-0430,Cash on Delivery,199.95,2.24,Grocery,February,2024
+T-0431,Cash on Delivery,776.77,115.28,Grocery,December,2024
+T-0432,Bank Card,16.38,1.05,Electronics,September,2024
+T-0433,Cash on Delivery,586.56,21.79,Electronics,June,2024
+T-0434,UPI,994.71,6.61,Clothing,April,2024
+T-0435,Bank Card,83.66,9.74,Clothing,January,2024
+T-0436,UPI,90.8,17.7,Grocery,February,2024
+T-0437,Bank Card,811.89,138.01,Electronics,July,2024
+T-0438,UPI,278.64,12.97,Electronics,December,2024
+T-0439,UPI,297.94,17.61,Grocery,January,2024
+T-0440,Bank Card,948.54,127.98,Clothing,April,2024
+T-0441,Bank Card,641.77,21.0,Clothing,May,2024
+T-0442,UPI,35.97,4.33,Clothing,February,2024
+T-0443,Bank Card,751.65,23.23,Electronics,July,2024
+T-0444,Cash on Delivery,942.87,137.81,Clothing,April,2024
+T-0445,Bank Card,36.66,0.66,Electronics,December,2024
+T-0446,Cash on Delivery,291.86,15.64,Electronics,July,2024
+T-0447,Cash on Delivery,593.96,61.44,Clothing,October,2024
+T-0448,Bank Card,93.97,2.3,Clothing,January,2024
+T-0449,Cash on Delivery,380.01,67.09,Electronics,February,2024
+T-0450,Bank Card,543.34,18.68,Grocery,March,2024
+T-0451,UPI,266.92,11.79,Electronics,February,2024
+T-0452,Cash on Delivery,848.28,33.83,Clothing,April,2024
+T-0453,Bank Card,389.88,58.79,Clothing,December,2024
+T-0454,Bank Card,972.83,102.19,Electronics,October,2024
+T-0455,Bank Card,570.41,93.7,Electronics,November,2024
+T-0456,Bank Card,456.59,67.72,Grocery,September,2024
+T-0457,Bank Card,717.14,121.57,Grocery,February,2024
+T-0458,Bank Card,806.91,93.45,Electronics,October,2024
+T-0459,Bank Card,363.61,46.37,Electronics,May,2024
+T-0460,Cash on Delivery,242.16,30.48,Clothing,October,2024
+T-0461,Cash on Delivery,89.76,6.35,Electronics,November,2024
+T-0462,Bank Card,962.87,187.13,Clothing,April,2024
+T-0463,UPI,85.14,1.87,Electronics,October,2024
+T-0464,Cash on Delivery,79.36,14.83,Clothing,March,2024
+T-0465,Cash on Delivery,163.56,27.38,Electronics,April,2024
+T-0466,UPI,976.29,32.62,Clothing,December,2024
+T-0467,Cash on Delivery,935.9,146.89,Clothing,March,2024
+T-0468,Bank Card,158.25,13.54,Grocery,September,2024
+T-0469,Bank Card,266.28,11.0,Electronics,October,2024
+T-0470,Bank Card,257.76,19.87,Clothing,June,2024
+T-0471,Bank Card,629.26,114.73,Grocery,September,2024
+T-0472,Bank Card,915.03,73.17,Grocery,October,2024
+T-0473,UPI,531.56,36.7,Clothing,September,2024
+T-0474,UPI,548.93,96.25,Grocery,February,2024
+T-0475,UPI,60.87,11.54,Grocery,July,2024
+T-0476,UPI,325.72,28.1,Electronics,January,2024
+T-0477,Bank Card,488.67,42.22,Electronics,August,2024
+T-0478,UPI,907.42,13.48,Grocery,May,2024
+T-0479,Bank Card,965.7,149.19,Grocery,March,2024
+T-0480,UPI,942.23,167.32,Clothing,May,2024
+T-0481,Cash on Delivery,62.52,0.97,Clothing,September,2024
+T-0482,Bank Card,981.91,14.61,Clothing,April,2024
+T-0483,Bank Card,119.74,13.33,Grocery,July,2024
+T-0484,UPI,630.13,62.11,Electronics,March,2024
+T-0485,Bank Card,873.58,84.66,Grocery,September,2024
+T-0486,Cash on Delivery,843.14,155.32,Grocery,June,2024
+T-0487,UPI,681.36,33.88,Electronics,June,2024
+T-0488,Cash on Delivery,53.03,6.4,Clothing,October,2024
+T-0489,UPI,403.13,49.25,Grocery,March,2024
+T-0490,Cash on Delivery,561.22,17.35,Electronics,February,2024
+T-0491,Bank Card,800.86,25.8,Electronics,July,2024
+T-0492,Cash on Delivery,705.02,108.65,Electronics,April,2024
+T-0493,Bank Card,188.23,21.92,Clothing,April,2024
+T-0494,UPI,628.28,17.88,Electronics,January,2024
+T-0495,Cash on Delivery,29.36,4.66,Grocery,June,2024
+T-0496,Bank Card,64.27,12.22,Electronics,April,2024
+T-0497,Cash on Delivery,623.55,18.81,Clothing,November,2024
+T-0498,UPI,427.31,48.91,Electronics,August,2024
+T-0499,UPI,732.91,19.94,Grocery,December,2024
+T-0500,Bank Card,661.57,103.88,Clothing,March,2024

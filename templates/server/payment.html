@@ -5,6 +5,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logo.png' %}">
     <title>Document</title>
 </head>
 <style>
@@ -98,6 +99,7 @@
         margin-right: -290px;
         float: left;
     }
+
     .month-select {
         padding: 0.25rem;
         /* border: 1px solid #ccc; */
@@ -114,144 +116,149 @@
     <img id="lock_logo" src="{% static 'images/lock_logo.png' %}">
 </header>
 
-<body style="overflow: hidden;">
-    <div class="container">
-        <div class="details">
-            <div class="address" style="display: flex; align-items: flex-start;">
-                <p style="font-weight: bold; font-size: 18px; margin-bottom: 10px;">1. Delivery Address</p>
-                <div style="flex: 1;text-align:center">
-                    <p>Ashwin Negi<br>Flat-99, Block-B,<br>Sector-99, Dwarka<br>New Delhi, 110099<br><span
-                            style="color: blue; cursor: pointer;">Add delivery instructions</span></p>
+<body style="overflow-x: hidden;">
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <div class="details">
+                <div class="address" style="display: flex; align-items: flex-start;">
+                    <p style="font-weight: bold; font-size: 18px; margin-bottom: 10px;">1. Delivery Address</p>
+                    <div style="flex: 1;text-align:center">
+                        <p>Ashwin Negi<br>Flat-99, Block-B,<br>Sector-99, Dwarka<br>New Delhi, 110099<br><span
+                                style="color: blue; cursor: pointer;">Add delivery instructions</span></p>
+                    </div>
+                    <p style="color: blue; cursor: pointer; margin: 0;">Change</p>
                 </div>
-                <p style="color: blue; cursor: pointer; margin: 0;">Change</p>
-            </div>
-            <div class="address">
-                <p style="font-weight: bold; font-size: 18px; margin-bottom: 10px;">2. Select a payment method</p>
-                <div style="border: 1px solid #ddd; padding: 20px;">
+                <div class="address">
+                    <p style="font-weight: bold; font-size: 18px; margin-bottom: 10px;">2. Select a payment method</p>
+                    <div style="border: 1px solid #ddd; padding: 20px;">
 
-                    <div class="best_payment" style="margin-bottom: 20px;">
-                        <div style="display: flex; align-items: center;">
-                            <label for="bestPayment" style="font-weight: bold;">Best payment method</label>
-                        </div>
-                        <div class="card"
-                            style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
-                            <div style="width: 50%;">
-                                <input type="radio" id="HDFC" name="paymentMethod" style="margin-bottom: 10px;">
-                                <label for="HDFC" style="font-weight: bold;">HDFC Card Payment</label>
-                                <p>Get 10% discount on HDFC Card Payment</p>
+                        <div class="best_payment" style="margin-bottom: 20px;">
+                            <div style="display: flex; align-items: center;">
+                                <label for="bestPayment" style="font-weight: bold;">Best payment method</label>
                             </div>
-                            <div style="width: 50%; text-align: right;">
-                                <p style="color: red;">-10% Rs. 1611/-</p>
-                                <p style="text-decoration: line-through;">MRP Rs. 1790</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="recommended_payment" style="margin-bottom: 20px;">
-                        <div style="display: flex; align-items: center;">
-                            <label for="recommendedPayment" style="font-weight: bold;">Recommended payment
-                                method</label>
-                        </div>
-                        <div class="card"
-                            style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
-                            <div style="width: 50%;">
-                                <input type="radio" id="amazonPayUPI" name="paymentMethod" style="margin-bottom: 10px;">
-                                <label for="amazonPayUPI" style="font-weight: bold;">Amazon Pay UPI</label>
-                                <p>Get instant 5% cashback on Amazon UPI Payment</p>
-                            </div>
-                            <div style="width: 50%; text-align: right;">
-
-                                <p>Rs. 1790/-</p>
-                                <p>cashback 5%</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p style="margin-top: 10px; text-align: right;">Powered by Amazon Pay AI</p>
-                    <hr style="margin-top: 10px; margin-bottom: 10px;">
-
-                    <div class="another_payment" style="margin-bottom: 20px;">
-                        <div style="display: flex; align-items: center;">
-                            <label for="creditDebit" style="font-weight: bold;">Another payment method</label>
-                        </div>
-
-                        <div class="card"
-                            style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center; margin-top: 10px;">
-                            <div style="width: 75%;">
-                                <input type="radio" id="creditDebitCard" name="paymentMethod"
-                                    style="margin-bottom: 10px;">
-                                <label for="creditDebitCard">Credit or Debit Card</label>
-                                <img src="{% static 'images/card-images.png' %}" alt="Card Images"
-                                    style="margin-left: 10px; height: 20px;">
-                                <form class="card-options month-select" style="display: none">
-                                    <select id="card-select">
-                                        <option value="">Select Card Option</option>
-                                        <option value="SBI">SBI</option>
-                                        <option value="HDFC">HDFC</option>
-                                        <option value="ICICI">ICICI</option>
-                                    </select>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="card"
-                            style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center; margin-top: 10px;">
-                            <div style="width: 75%;">
-                                <input type="radio" id="upiPayment" name="paymentMethod" style="margin-bottom: 10px;">
-                                <label for="upiPayment">UPI</label>
-                                <img src="{% static 'images/upi-logos.png' %}" alt="UPI Logos"
-                                    style="margin-left: 10px; height: 20px; position: relative; top: 6px">
-                                <div class="upi-options month-select" style="display: none">
-                                    <select id="upi-select">
-                                        <option value="">Select UPI Option</option>
-                                        <option value="PAYTM">Paytm</option>
-                                        <option value="PHONEPE">PhonePe</option>
-                                    </select>
+                            <div class="card"
+                                style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
+                                <div style="width: 75%;">
+                                    <input value="HDFC" type="radio" id="best_payment" name="paymentMethod"
+                                        style="margin-bottom: 10px;" onchange="dynamic_order(this)">
+                                    <label for="HDFC" id="best-payment-method-name" style="font-weight: bold;"></label>
+                                    <p id = "best_below_statement">Get instant 5% cashback on Amazon UPI Payment</p>
+                                </div>
+                                <div style="width: 50%; text-align: right;" id="price-section">
+                                    <p id="dicounted-price" style="color: red;">-10% Rs. 1611/-</p>
+                                    <p id="original-price" style="text-decoration: line-through;">MRP Rs. 1790</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="card"
-                            style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center; margin-top: 10px;">
-                            <div style="width: 50%;">
-                                <input type="radio" id="cashOnDelivery" name="paymentMethod" value="CASH" style="margin-bottom: 10px;">
-                                <label for="cashOnDelivery">Cash On Delivery</label>
+                        <div class="recommended_payment" style="margin-bottom: 20px;">
+                            <div style="display: flex; align-items: center;">
+                                <label for="recommendedPayment" style="font-weight: bold;">Recommended payment
+                                    method</label>
+                            </div>
+                            <div class="card"
+                                style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center;">
+                                <div style="width: 50%;">
+                                    <input value="AMAZON_PAY" type="radio" id="recommended_payment" name="paymentMethod"
+                                        style="margin-bottom: 10px;" onchange="dynamic_order(this)">
+                                    <label for="amazonPayUPI" id="rec-payment-method-name"  style="font-weight: bold;"></label>
+                                    <p id="rec_below_statement">Get instant 5% cashback on Amazon UPI Payment</p>
+                                </div>
+                                <div style="width: 50%; text-align: right;" id="rec-price-section">
+                                    <p id="rec-dicounted-price" style="color: red;">-10% Rs. 1611/-</p>
+                                    <p id="rec-original-price" style="text-decoration: line-through;">MRP Rs. 1790</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p style="margin-top: 10px; text-align: right;">Powered by Amazon Pay AI</p>
+                        <hr style="margin-top: 10px; margin-bottom: 10px;">
+
+                        <div class="another_payment" style="margin-bottom: 20px;">
+                            <div style="display: flex; align-items: center;">
+                                <label for="creditDebit" style="font-weight: bold;">Another payment method</label>
+                            </div>
+
+                            <div class="card"
+                                style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center; margin-top: 10px;">
+                                <div style="width: 75%;">
+                                    <input value="SBI" type="radio" id="creditDebitCard" name="paymentMethod"
+                                        style="margin-bottom: 10px;" onchange="dynamic_order(this)">
+                                    <label for="creditDebitCard">Credit or Debit Card</label>
+                                    <img src="{% static 'images/card-images.png' %}" alt="Card Images"
+                                        style="margin-left: 10px; height: 20px;">
+                                    <div class="card-options month-select" style="display: none">
+                                        <select id="card-select" onchange="updateRadioValue(this)">
+                                            <option value=" SBI" selected>SBI</option>
+                                            <option value="HDFC">HDFC</option>
+                                            <option value="ICICI">ICICI</option>
+                                        </select>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class="card"
+                                style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center; margin-top: 10px;">
+                                <div style="width: 75%;">
+                                    <input value="PAYTM" type="radio" id="upiPayment" name="paymentMethod"
+                                        style="margin-bottom: 10px;" onchange="dynamic_order(this)">
+                                    <label for="upiPayment">UPI</label>
+                                    <img src="{% static 'images/upi-logos.png' %}" alt="UPI Logos"
+                                        style="margin-left: 10px; height: 20px; position: relative; top: 6px">
+                                    <div class="upi-options month-select" style="display: none">
+                                        <select id="upi-select" onchange="updateRadioValue2(this)">
+                                            <option value="PAYTM" selected>Paytm</option>
+                                            <option value="PHONEPE">PhonePe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card"
+                                style="border: 1px solid #ddd; padding: 10px; display: flex; align-items: center; margin-top: 10px;">
+                                <div style="width: 50%;">
+                                    <input type="radio" id="cashOnDelivery" name="paymentMethod" value="CASH"
+                                        style="margin-bottom: 10px;" onchange="dynamic_order(this)">
+                                    <label for="cashOnDelivery">Cash On Delivery</label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="display" style="border: 1px solid black; padding: 10px;">
+            <div class="display" style="border: 1px solid black; padding: 10px;">
 
-            <p style="text-align:center; font-size: 20px; font-weight: 600; margin-bottom: 13px">Order Summary</p>
-            <div>
-                <ul style="list-style: none;">
-                    <li>Items:                  Rs. {{item.cost}}/-</li>
-                    <li>Delivery:               Rs. 0/-</li>
-                    <li>Total:                  Rs. {{item.cost}}/-</li>
-                    <li>Promotion applied:      Rs. 179/-</li>
-                    <li>Order Total:            Rs. 1611/-</li>
-                </ul>
-
-                <div style="text-align:center">
-                    <button style="background-color: #F6D265; margin-top: 10px;
-        padding: 0.5rem;
-        font-weight: bold;
-        border: 1px solid #ccc;
-        border-radius: 0.4rem;
-        font-size: 1rem;
-        color: black;
-        width: 12vw;
-        font-size: 13px;
-        ">Place Order</button>
+                <p style="text-align:center; font-size: 20px; font-weight: 600; margin-bottom: 13px">Order Summary</p>
+                <div>
+                    <ul class="order_summary" id="order_summary" style="list-style: none;">
+                        <li><pre>Items:                                Rs. <span id="order_total">{{ item.cost }}</span>/-</pre></li>
+                        <li><pre>Delivery:                            Rs. 0/-</pre></li>
+                        <li><pre>Total:                                 Rs. {{item.cost}}/-</pre></li>
+                        <li><pre><span id="promotions">Promotion applied:                Rs. 179/-</span></pre></li>
+                        <li><pre>Order Total:                       Rs. <span id="order_final">{{ item.cost }}</span>/-</pre></li>
+                    </ul>
+                    <div style="text-align:center">
+                        <button type="submit"
+                            style="background-color: #F6D265; margin-top: 10px;padding: 0.5rem;font-weight: bold;border: 1px solid #ccc;border-radius: 0.4rem;font-size: 1rem;color: black;width: 12vw;font-size: 13px;">Place
+                            Order</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </body>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        ai_payment();
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var selectElement = document.getElementById('best_payment');
+        dynamic_order(selectElement);
+    });
+
     document.getElementById('upiPayment').addEventListener('click', function () {
         var upiOptions = document.querySelector('.upi-options');
         if (this.checked) {
@@ -269,5 +276,156 @@
             upiOptions.style.display = 'none';
         }
     });
+    function updateRadioValue(select) {
+        var radio = document.getElementById('creditDebitCard');
+        radio.value = select.value;
+        var xyz = document.getElementById('creditDebitCard');
+        dynamic_order(xyz);
+    }
+
+    function updateRadioValue2(select) {
+        var radio = document.getElementById('upiPayment');
+        radio.value = select.value;
+        var xyz = document.getElementById('upiPayment');
+        dynamic_order(xyz);
+    }
+
+    function ai_payment() {
+        let total_cost = parseInt(document.getElementById('order_total').innerHTML);
+        var url = window.location.origin + '{% url "ai_payment_method" %}';
+        var params = new URLSearchParams({ product_price: total_cost });
+        url += '?' + params.toString();
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                // console.log(data);
+                // console.log(data['disc_data'][1][1]);
+                
+                let best_payment_name = data['disc_data'][1][0];
+                let discount_perc = data['disc_data'][1][1];
+                let cashback_perc = data['disc_data'][1][2];
+                let xyz = document.getElementById('best_payment');
+                xyz.value = best_payment_name;
+                console.log(best_payment_name,discount_perc,cashback_perc);
+                let name_tag = document.getElementById("best-payment-method-name");
+                
+                if(best_payment_name=="AMAZON_PAY"){
+                    best_payment_name="Amazon Pay";
+                    name_tag.innerHTML = best_payment_name;
+                }
+                else{
+                    console.log("name changed")
+                    name_tag.innerText = best_payment_name;
+                }
+
+                if (discount_perc > 0) {
+                    //console.log("hello");
+                    let promotion = Math.ceil((total_cost * discount_perc) / 100);
+                    let final_amount = total_cost - promotion;
+                    let price_section = document.getElementById("price-section");
+                    price_section.innerHTML = `<p id="dicounted-price" style="color: red;">-${discount_perc}% Rs. ${final_amount}/-</p>
+                    <p id="original-price" style="text-decoration: line-through;">MRP Rs. ${total_cost}</p>`;
+                    let below = document.getElementById("best_below_statement");
+                    below.innerHTML = `Get flat ${discount_perc}% discount on ${best_payment_name} Payment`;
+
+                }
+                else if (cashback_perc > 0) {
+                    console.log('here');
+                    let price_section = document.getElementById("price-section");
+                    price_section.innerHTML = `<p>Rs. ${total_cost}/-</p>
+                    <p>cashback ${cashback_perc}%</p>`;
+                    let below = document.getElementById("best_below_statement");
+                    below.innerHTML = `Get instant ${cashback_perc}% cashback on ${best_payment_name} Payment`;
+                }
+
+
+                let rec_payment_name = data['disc_data'][0][0];
+                let rec_discount_perc = data['disc_data'][0][1];
+                let rec_cashback_perc = data['disc_data'][0][2];
+                let abc = document.getElementById('recommended_payment');
+                abc.value = rec_payment_name;
+                console.log(rec_payment_name, rec_discount_perc, rec_cashback_perc);
+                
+                let rec_name_tag = document.getElementById("rec-payment-method-name");
+                // console.log(rec_payment_name)
+                
+                if(rec_payment_name=="AMAZON_PAY"){
+                    rec_payment_name = "Amazon Pay";
+                    rec_name_tag.innerHTML = rec_payment_name;
+                }
+                if(rec_payment_name=="AMAZON_WALLET"){
+                    rec_payment_name = "Amazon Wallet";
+                    rec_name_tag.innerHTML = rec_payment_name;
+                }
+                else{
+                
+                    rec_name_tag.innerText = rec_payment_name;
+                }
+
+                if (rec_discount_perc > 0) {
+                    let promotion = Math.ceil((total_cost * discount_perc) / 100);
+                    let final_amount = total_cost - promotion;
+                    let price_section = document.getElementById("rec-price-section");
+                    price_section.innerHTML = `<p id="dicounted-price" style="color: red;">-${discount_perc}% Rs. ${final_amount}/-</p>
+                    <p id="original-price" style="text-decoration: line-through;">MRP Rs. ${total_cost}</p>`;
+                    let below = document.getElementById("rec_below_statement");
+                    below.innerHTML = `Get flat ${rec_discount_perc}% discount on ${rec_payment_name} Payment`;
+
+                }
+                else if (rec_cashback_perc > 0) {
+                    let price_section = document.getElementById("rec-price-section");
+                    price_section.innerHTML = `<p>Rs. ${total_cost}/-</p>
+                    <p>cashback ${rec_cashback_perc}%</p>`;
+                    let below = document.getElementById("rec_below_statement");
+                    below.innerHTML = `Get instant ${rec_cashback_perc}% cashback on ${rec_payment_name} Payment`;    
+                }
+                
+                
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function dynamic_order(event) {
+        var selectedBank = event.value;
+        var url = window.location.origin + '{% url "dynamic_order" %}';
+        var params = new URLSearchParams({ bankDetails: selectedBank });
+        url += '?' + params.toString();
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let discount_perc = data['disc_data'][0];
+                let cashback_perc = data['disc_data'][1];
+                //console.log(discount_perc, cashback_perc);
+                let xyz = document.getElementById('order_summary');
+                let total_cost = parseInt(document.getElementById('order_total').innerHTML);
+
+                if (discount_perc > 0) {
+                    let promotion = Math.ceil((total_cost * discount_perc) / 100);
+                    let final_amount = total_cost - promotion;
+                    //console.log(total_cost, promotion, final_amount);
+                    let idk = `<pre>Discount applied:              Rs. ${promotion}/-<pre>`;
+                    document.getElementById('promotions').innerHTML = idk;
+                    document.getElementById('order_final').innerHTML = final_amount;
+
+                }
+                else if (cashback_perc > 0) {
+                    //console.log('here');
+                    let promotion = Math.ceil((total_cost * cashback_perc) / 100);
+                    let idk = `<pre>Cashback applied:            Rs. ${promotion}/-</pre>`;
+                    document.getElementById('promotions').innerHTML = idk;
+                    document.getElementById('order_final').innerHTML = total_cost;
+                }
+                if (discount_perc === 0 && cashback_perc === 0) {
+                    document.getElementById('order_final').innerHTML = total_cost;
+                    let idk = `<pre>Discount applied:           Rs. 0/-</pre>`;
+                    document.getElementById('promotions').innerHTML = idk;
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
 </script>
+
 </html>
