@@ -132,6 +132,8 @@ The incentive system aims to enhance user engagement by rewarding users who save
    ```sh
    python manage.py runserver
 
+(username - pranavpc, password - 123)
+
 ## Usage
 * Access the Expense Tracking Dashboard through your web browser.
 * Set your expense limits and view dynamic graphs for a better understanding of your financial habits.
