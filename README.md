@@ -47,6 +47,37 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
 
 **Tech Stack:** Llama 3, Ollama, Python, PandasAI
 
+## Vision for future development (not included in prototype)
+### Customer Incentive system 
+#### Overview
+The incentive system aims to enhance user engagement by rewarding users who save the most money and make the most purchases through the Amazon Expense Tracker. The system will provide points based on savings and purchases, and users can redeem these points for various rewards. This plan outlines the objectives, target audience, key features, implementation strategy, and revenue model.
+#### Objectives
+* Increase User Engagement: Encourage users to actively track their expenses and savings.
+* Promote Financial Responsibility: Motivate users to save more and manage their expenses better.
+* Enhance User Retention: Offer rewards to keep users returning to the platform.
+* Boost Brand Loyalty: Strengthen the relationship between the platform and its users through positive reinforcement.
+#### Target Audience
+* Amazon Shoppers: Individuals who frequently purchase items from Amazon and are interested in managing their finances.
+* Budget-Conscious Consumers: Users who aim to save money and track their expenses meticulously.
+* Tech-Savvy Users: Individuals who are comfortable using online tools and apps for financial management.
+#### Key Features
+1. Points Calculation System
+ * Savings-Based Points: Users earn points for the amount of money they save.
+ * Purchase-Based Points: Users earn points for the number of purchases they make.
+2. Leaderboard
+ * Displays top savers and top purchasers, updated weekly.
+3. Rewards Redemption
+ * Users can redeem their points for rewards such as discount coupons, gift cards, or 
+   exclusive deals.
+4. Notification System
+ * Users receive notifications when they reach milestones, can redeem rewards, or when new rewards are available.
+#### Revenue Model
+1. Premium Memberships: Offer premium memberships that provide additional points or exclusive rewards.
+2. Affiliate Marketing: Partner with brands to offer rewards, earning a commission on user redemptions.
+3. Advertisements: Display targeted advertisements based on user purchase and savings behavior.
+4. Data Insights: Provide anonymized data insights to partners, helping them understand consumer behavior.
+
+
 ## Gallery
 ### Chatbot
 * Chatbot Workflow
