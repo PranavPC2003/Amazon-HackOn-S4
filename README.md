@@ -84,11 +84,9 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
 2. Navigate to the project directory:
     ```sh
     cd amazon-expense-tracker
-3. Install the required dependencies:
-    ```sh
-    pip install -r requirements.txt
-4. Run the Django server:
- ```sh
+
+3. Run the Django server:
+   ```sh
  python manage.py runserver
  ```
 
