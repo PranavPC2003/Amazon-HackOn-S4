@@ -67,6 +67,10 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
    ![screenshot](recommender_workflow.png)
 ### Expense Tracker
 
+* Demo video for Expense Tracker
+  
+  [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/CTh3A3S2I60/0.jpg)](https://www.youtube.com/watch?v=CTh3A3S2I60)
+  
 ## Getting Started
 
 ### Prerequisites
