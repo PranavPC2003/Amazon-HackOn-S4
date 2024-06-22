@@ -115,12 +115,20 @@ The incentive system aims to enhance user engagement by rewarding users who save
 1. Clone the repository:
    ```sh
    git clone https://github.com/PranavPC2003/Amazon-HackOn-S4
-
-2. Navigate to the project directory:
+    
+2. For Windows, create a virtual environment:
     ```sh
-    cd amazon-expense-tracker
+    virtualenv venv
 
-3. Run the Django server:
+3. Enter the virtual environment using the command:
+    ```sh
+    venv\Scripts\activate
+
+4. Install dependencies:
+    ```sh
+    pip install django
+
+5. Run the Django server:
    ```sh
    python manage.py runserver
 
