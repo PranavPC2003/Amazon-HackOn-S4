@@ -244,7 +244,7 @@ def payment_page(request):
         except:
             print('no budget')
 
-        total_expense = 26895 #static for now
+        total_expense = 34172 #static for now
         if (total_expense+item.cost >= (budget_obj.amount*0.75) and budget_obj.above_75 == False):
             send_budget_alert(user.first_name, budget_obj.amount, total_expense+item.cost, userProfileObj.email)
             budget_obj.above_75 = True
@@ -288,7 +288,7 @@ def send_budget_alert(name, budget, expense,email):
     # Email configuration
     sender_email = "ashwinnegi.an@gmail.com"
     receiver_email = email
-    password = "ksgeqtyyrtthobzp"
+    password = "eocvekbrqmzxqlid"
     
     # Create the email content
     if percent_spent >= 75 and percent_spent < 100:
