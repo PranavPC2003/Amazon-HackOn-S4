@@ -88,7 +88,6 @@ The chatbot leverages the power of Llama 3, Ollama, and PandasAI to provide accu
 3. Run the Django server:
    ```sh
    python manage.py runserver
- ```
 
 ## Usage
 * Access the Expense Tracking Dashboard through your web browser.
