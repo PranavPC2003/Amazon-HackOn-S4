@@ -1,11 +1,11 @@
 
 # Amazon HackOn Season 4
 **Theme** - Personalized Payment Experiences and Financial Management
-1. AI-powered chatbot automates handling of customer payment queries.
+1. AI-Powered Chatbot automates handling of customer payment queries.
 
-2. Automated budgeting solution allows customers to set limits on purchasing amount and receive notifications for thresholds. Tracking savings on a yearly, monthly, and overall basis.Monitoring spending across different product categories. 
+2. Automated Budgeting Solution allows customers to set limits on purchasing amount and receive notifications for thresholds. Tracking savings on a yearly, monthly, and overall basis.Monitoring spending across different product categories. 
 
-3. AI-generated recommendation engine suggests best payment method based on payment history, success rates,cashbacks, and costs.
+3. AI-Generated Recommendation Engine suggests best payment method based on payment history, success rates,cashbacks, and costs.
 
 # Amazon Expense Tracker
 
